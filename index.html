@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ратила — Mobile/Software Developer</title>
+    <!-- Подключаем Tailwind CSS из CDN для стилей -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Подключаем иконки Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        /* Градиентный фон для всего сайта */
+        body::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top right, #d946ef, #8b5cf6, #06b6d4);
+            opacity: 0.2;
+            z-index: -1;
+            transition: opacity 0.3s ease;
+        }
+        /* Тёмная тема: убираем или изменяем градиент */
+        body.dark::before {
+            background: #18181b; /* zinc-950 */
+            opacity: 1;
+        }
+        /* Резервные стили для тёмной темы */
+        .dark {
+            background-color: #18181b !important; /* zinc-950 */
+            color: #f4f4f5 !important; /* zinc-50 */
+        }
+    </style>
+    <!-- Конфигурация Tailwind для тёмной темы -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {}
+            }
+        };
+    </script>
+</head>
+<body class="min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 transition-colors duration-300">
+
+    <!-- NAV -->
+    <header class="sticky top-0 z-50 border-b border-zinc-200/60 dark:border-zinc-800/60 backdrop-blur-md bg-white/70 dark:bg-zinc-950/60 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-fuchsia-500 via-violet-500 to-cyan-500"></div>
+                <span class="font-semibold" id="nav-name"></span>
+            </div>
+            <nav class="hidden md:flex items-center gap-6 text-sm" id="nav-links">
+                <!-- Навигационные ссылки будут вставлены JavaScript -->
+            </nav>
+            <div class="flex items-center gap-2">
+                <div class="flex items-center gap-2" id="language-switcher">
+                    <!-- Кнопки переключения языка будут вставлены JavaScript -->
+                </div>
+                <button id="theme-toggle" class="px-2.5 py-1 rounded-lg border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-200/60 dark:hover:bg-zinc-800/60 transition-colors duration-300 flex items-center justify-center" aria-label="Переключить тему">
+                    <i data-lucide="sun" class="w-4 h-4 text-amber-500"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section>
+        <div class="max-w-6xl mx-auto px-4 py-16 sm:py-24">
+            <div class="p-6 sm:p-10 rounded-3xl backdrop-blur-xl bg-white/70 dark:bg-zinc-900/60 border border-white/30 dark:border-zinc-800/50 transition-colors duration-300">
+                <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight" id="hero-title"></h1>
+                <p class="mt-4 text-lg sm:text-xl max-w-3xl" id="hero-subtitle"></p>
+                <div class="mt-6 flex flex-wrap items-center gap-3" id="hero-pills">
+                    <!-- Pill-ы будут вставлены JavaScript -->
+                </div>
+                <div class="mt-8 flex flex-wrap gap-3" id="hero-actions">
+                    <!-- Кнопки действий будут вставлены JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ОСНОВНОЕ СОДЕРЖАНИЕ -->
+    <main id="main-content">
+        <!-- Секции будут вставлены JavaScript -->
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-10 text-center text-sm opacity-70">
+        © <span id="footer-year"></span> <span id="footer-name"></span>. Made with ❤️ & HTML.
+    </footer>
+
+    <script>
+        // === DATA ===
+        const data = {
+            name: "Ратила — Mobile/Software Developer",
+            tagline: "Делаю приложения, которые решают реальные задачи",
+            location: "Беларусь • открыт к релокации/удалёнке",
+            age: 18,
+            email: "weldet2007@gmail.com",
+            phone: "+375 (29) 179-97-07",
+            telegram: "https://t.me/rat1la",
+            github: "https://github.com/Ratila1",
+            linkedin: "https://www.linkedin.com/in/daniil-ratnikau-504a60359",
+            resumeUrl: "/resume.pdf",
+            languages: [
+                { code: "ru", label: "RU" },
+                { code: "en", label: "EN" },
+            ],
+            i18n: {
+                ru: {
+                    heroTitle: "Разработчик мобильных и программных решений",
+                    heroSubtitle:
+                        "Android (Java), Python, C++, Unreal Engine 5. Победы в конкурсах, сильный академический бэкграунд и продакшн-подход.",
+                    hireMe: "Нанять меня",
+                    viewCV: "Скачать резюме",
+                    sections: {
+                        about: "Обо мне",
+                        skills: "Навыки",
+                        projects: "Проекты",
+                        awards: "Достижения",
+                        experience: "Опыт",
+                        education: "Образование",
+                        contact: "Контакты",
+                    },
+                    about:
+                        "Я создаю приложения и инструменты, которые приносят ценность: от телеграм-ботов до мобильных приложений и прототипов устройств. Постоянно прокачиваю английский (B1→B2) и софт‑скиллы. Ценю чистый код, UX и скорость доставки.",
+                    aboutBullets: ["Чистая архитектура и читаемый код", "Прототипы быстро, качество — стабильно", "Работаю сам и в команде", "Ориентируюсь на продукт и пользователей"],
+                    techStack: ["Java", "Android SDK", "Python", "C++", "Unreal Engine 5", "Blueprints", "SQLite", "Git", "Figma"],
+                    interests: "Мобилки, ИИ/боты, геймдев, продуктовый дизайн.",
+                    skills: [
+                        { name: "Java / Android", level: 90 },
+                        { name: "Python / Bots", level: 80 },
+                        { name: "C++", level: 65 },
+                        { name: "Unreal Engine 5 (Blueprints)", level: 70 },
+                        { name: "UI/UX, Figma", level: 75 },
+                        { name: "Git, CI/CD (база)", level: 70 },
+                    ],
+                    projects: [
+                        {
+                            title: "Noxi — обучение языкам во сне",
+                            stack: ["Android", "Java ~20k loc", "TTS/SSML", "Будильники", "Подключаемые устройства"],
+                            highlight: "Готовлю к республиканскому конкурсу \"100 идей для Беларуси\" (ноя–дек 2025)",
+                            description:
+                                "Курсы, контроль сна, умные сигналы, трекинг прогресса. Архитектура модульная, локальная БД, кастомные виджеты.",
+                        },
+                        {
+                            title: "Findmate — поиск людей и команд",
+                            stack: ["Android", "Java ~7k loc", "Алгоритмы сопоставления"],
+                            highlight: "Финалист: сильный проект, но без приза на республиканском этапе",
+                            description:
+                                "Приложение помогает находить напарников по навыкам и интересам. Свой мессенджер, карточки, фильтры.",
+                        },
+                        {
+                            title: "Telegram-бот колледжа",
+                            stack: ["Python ~1k loc", "Aiogram", "Админ‑панель"],
+                            highlight: "1 место на научной конференции инноваций",
+                            description:
+                                "Много функций: расписание, уведомления, заявки, интеграции. Логи, права ролей, удобные команды.",
+                        },
+                        {
+                            title: "2.5D платформер",
+                            stack: ["Unreal Engine 5", "Blueprints"],
+                            highlight: "2 место на Patriot.by (областной конкурс)",
+                            description:
+                                "Игровой прототип с физикой, уровнями и базовой боевой системой. Акцент на визуал и стабильный FPS.",
+                        },
+                        {
+                            title: "Генератор электрических сигналов",
+                            stack: ["Электроника", "Софтовая часть"],
+                            highlight: "1 место в областном конкурсе разработок",
+                            description:
+                                "Устройство генерирует синус, пилу и др. формы. Интерфейc для настройки параметров и калибровка.",
+                        },
+                        {
+                            title: "Мини‑приложения (3 шт.)",
+                            stack: ["Android", "SQLite"],
+                            highlight: "Учебные CRUD‑приложения",
+                            description:
+                                "База данных + полезные утилиты. Чистая архитектура и внятный UI.",
+                        },
+                        {
+                            title: "Шахматный тестер",
+                            stack: ["C++"],
+                            highlight: "Консольный инструмент",
+                            description:
+                                "Тестирование ходов и правил. Основа для дальнейшего движка.",
+                        },
+                    ],
+                    awards: [
+                        { title: "Patriot.by (область)", place: "2 место", details: "2.5D платформер на UE5" },
+                        { title: "Научная конференция инноваций", place: "1 место", details: "Telegram‑бот колледжа (Python)" },
+                        { title: "Конкурс разработок (область)", place: "1 место", details: "Генератор электрических сигналов" },
+                        { title: "100 идей для Беларуси", place: "Участник (предстоящий)", details: "Noxi (ноя–дек 2025)" },
+                    ],
+                    experience: [
+                        { role: "Фриланс: дизайн и разработка", time: "2021 — н.в.", bullets: ["UI/UX‑макеты", "Android‑приложения", "Боты"] },
+                        { role: "Менеджер по продажам (BMZ)", time: "2024", bullets: ["Коммуникации, KPI", "Работа с возражениями"] },
+                        { role: "Бармен", time: "2025", bullets: ["Сервис", "Стрессоустойчивость", "Командная работа"] },
+                    ],
+                    education: {
+                        school: "Гомельский государственный машиностроительный колледж",
+                        degree: "Программист мобильных устройств (среднее спец.)",
+                        gpa: "Средний балл: 9.7",
+                        extra: "Староста, активная деятельность",
+                        grad: "Окончание: февраль 2026",
+                        english: "Английский: B1 (улучшаю)",
+                    },
+                    contactCta: "Связаться со мной",
+                    contactFormPlaceholders: {
+                        name: "Ваше имя",
+                        email: "Email",
+                        message: "Сообщение",
+                    }
+                },
+                en: {
+                    heroTitle: "Mobile & Software Developer",
+                    heroSubtitle:
+                        "Android (Java), Python, C++, Unreal Engine 5. Competition wins, strong academics, and a product mindset.",
+                    hireMe: "Hire me",
+                    viewCV: "Download CV",
+                    sections: {
+                        about: "About",
+                        skills: "Skills",
+                        projects: "Projects",
+                        awards: "Awards",
+                        experience: "Experience",
+                        education: "Education",
+                        contact: "Contact",
+                    },
+                    about:
+                        "I build useful apps and tools — from Telegram bots to Android apps and hardware prototypes. I keep leveling up English (B1→B2) and soft skills. I value clean code, UX, and shipping fast.",
+                    aboutBullets: ["Clean architecture and readable code", "Fast prototypes, stable quality", "Work independently and in a team", "Product and user-oriented approach"],
+                    techStack: ["Java", "Android SDK", "Python", "C++", "Unreal Engine 5", "Blueprints", "SQLite", "Git", "Figma"],
+                    interests: "Mobile, AI/bots, game dev, product design.",
+                    skills: [
+                        { name: "Java / Android", level: 90 },
+                        { name: "Python / Bots", level: 80 },
+                        { name: "C++", level: 65 },
+                        { name: "Unreal Engine 5 (Blueprints)", level: 70 },
+                        { name: "UI/UX, Figma", level: 75 },
+                        { name: "Git, CI/CD (basics)", level: 70 },
+                    ],
+                    projects: [
+                        {
+                            title: "Noxi — sleep‑learning app",
+                            stack: ["Android", "Java ~20k loc", "TTS/SSML", "Alarms", "Connected devices"],
+                            highlight: "Preparing for national contest \"100 Ideas for Belarus\" (Nov–Dec 2025)",
+                            description:
+                                "Courses, sleep control, smart alarms, progress tracking. Modular architecture, local DB, custom widgets.",
+                        },
+                        {
+                            title: "Findmate — team finder",
+                            stack: ["Android", "Java ~7k loc", "Matching algorithms"],
+                            highlight: "Finalist: strong project (no prize at national stage)",
+                            description:
+                                "Helps people find teammates by skills and interests. Built‑in messenger, cards, filters.",
+                        },
+                        {
+                            title: "College Telegram Bot",
+                            stack: ["Python ~1k loc", "Aiogram", "Admin panel"],
+                            highlight: "1st place at innovation conference",
+                            description:
+                                "Lots of features: schedule, notifications, requests, integrations. Logging, roles, convenient commands.",
+                        },
+                        {
+                            title: "2.5D Platformer",
+                            stack: ["Unreal Engine 5", "Blueprints"],
+                            highlight: "2nd place at Patriot.by (regional)",
+                            description:
+                                "Game prototype with physics, levels, and basic combat. Focus on visuals and stable FPS.",
+                        },
+                        {
+                            title: "Signal Generator Device",
+                            stack: ["Electronics", "Software"],
+                            highlight: "1st place in regional development contest",
+                            description:
+                                "Generates sine, sawtooth and other waveforms. UI for parameter tuning and calibration.",
+                        },
+                        {
+                            title: "Mini apps (3)",
+                            stack: ["Android", "SQLite"],
+                            highlight: "Study CRUD apps",
+                            description:
+                                "Local DB utilities with clean architecture and clear UI.",
+                        },
+                        {
+                            title: "Chess Tester",
+                            stack: ["C++"],
+                            highlight: "Console tool",
+                            description:
+                                "Validates moves and rules. Base for future engine.",
+                        },
+                    ],
+                    awards: [
+                        { title: "Patriot.by (regional)", place: "2nd place", details: "2.5D platformer on UE5" },
+                        { title: "Innovation Conference", place: "1st place", details: "College Telegram bot (Python)" },
+                        { title: "Development Contest (regional)", place: "1st place", details: "Signal generator device" },
+                        { title: "100 Ideas for Belarus", place: "Upcoming", details: "Noxi (Nov–Dec 2025)" },
+                    ],
+                    experience: [
+                        { role: "Freelance: design & development", time: "2023 — present", bullets: ["UI/UX mockups", "Android apps", "Bots"] },
+                        { role: "Sales Manager (BMZ)", time: "2023", bullets: ["Communication, KPIs", "Objection handling"] },
+                        { role: "Bartender", time: "2022", bullets: ["Service", "Stress‑resistance", "Teamwork"] },
+                    ],
+                    education: {
+                        school: "Gomel State Machine‑Building College",
+                        degree: "Mobile Devices Programming (secondary specialized)",
+                        gpa: "GPA: 9.7",
+                        extra: "Class leader, community involvement",
+                        grad: "Graduation: Feb 2026",
+                        english: "English: B1 (improving)",
+                    },
+                    contactCta: "Get in touch",
+                    contactFormPlaceholders: {
+                        name: "Your name",
+                        email: "Email",
+                        message: "Message",
+                    }
+                },
+            },
+        };
+
+        let currentLang = 'ru';
+
+        // Функция для рендеринга иконок с помощью Lucide Icons
+        function renderIcons() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            } else {
+                console.error('Lucide Icons library is not loaded');
+            }
+        }
+
+        // Общая функция для создания HTML-элемента
+        function createHTMLElement(tag, classes = [], innerHTML = '') {
+            const element = document.createElement(tag);
+            if (classes.length) {
+                element.className = classes.join(' ');
+            }
+            if (innerHTML) {
+                element.innerHTML = innerHTML;
+            }
+            return element;
+        }
+
+        // Рендеринг прогресс-бара с анимацией
+        function renderProgress(containerId, skills) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = '';
+            skills.forEach(s => {
+                const glass = "backdrop-blur-xl bg-white/70 dark:bg-zinc-900/60 border border-white/30 dark:border-zinc-800/50 transition-colors duration-300";
+                const skillDiv = createHTMLElement('div', [`p-5`, `rounded-2xl`, glass]);
+                skillDiv.innerHTML = `
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="font-medium">${s.name}</span>
+                        <span class="text-sm opacity-70">${s.level}%</span>
+                    </div>
+                    <div class="w-full h-3 rounded-full bg-black/5 dark:bg-white/10 overflow-hidden">
+                        <div class="progress-bar h-full rounded-full bg-gradient-to-r from-violet-500 to-cyan-400" style="width: 0%;" data-level="${s.level}"></div>
+                    </div>
+                `;
+                container.appendChild(skillDiv);
+            });
+
+            // Анимация с помощью IntersectionObserver
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const progressBar = entry.target.querySelector('.progress-bar');
+                        if (progressBar) {
+                            const level = progressBar.dataset.level;
+                            progressBar.style.width = `${level}%`;
+                            progressBar.style.transition = 'width 0.8s ease-out';
+                        }
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            document.querySelectorAll(`#${containerId} > div`).forEach(el => observer.observe(el));
+        }
+
+        // Рендеринг всех секций
+        function renderSections(langData) {
+            const mainContent = document.getElementById('main-content');
+            mainContent.innerHTML = '';
+
+            const glass = "backdrop-blur-xl bg-white/70 dark:bg-zinc-900/60 border border-white/30 dark:border-zinc-800/50 transition-colors duration-300";
+
+            // Функция для создания секции
+            function createSection(id, title) {
+                const section = createHTMLElement('section', [`py-16`, `sm:py-24`, `scroll-mt-24`]);
+                section.id = id;
+                section.innerHTML = `
+                    <div class="max-w-6xl mx-auto px-4">
+                        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight" id="title-${id}">${title}</h2>
+                        <div class="mt-8" id="content-${id}"></div>
+                    </div>
+                `;
+                return section;
+            }
+
+            // ABOUT
+            const aboutSection = createSection('about', langData.sections.about);
+            const aboutContent = aboutSection.querySelector('#content-about');
+            aboutContent.innerHTML = `
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="md:col-span-2 p-6 rounded-3xl ${glass}">
+                        <p class="leading-relaxed text-zinc-700 dark:text-zinc-300">${langData.about}</p>
+                        <ul class="mt-6 grid sm:grid-cols-2 gap-3 text-sm">
+                            ${langData.aboutBullets.map(b => `<li class="flex items-center gap-2"><i data-lucide="shield-check" class="w-4 h-4"></i> ${b}</li>`).join('')}
+                        </ul>
+                    </div>
+                    <div class="p-6 rounded-3xl ${glass}">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="code-2" class="w-5 h-5"></i> <span class="font-medium">Tech‑стек</span>
+                        </div>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            ${langData.techStack.map(t => `<span class="px-3 py-1 rounded-full text-sm border border-white/20 dark:border-zinc-700/60 bg-white/50 dark:bg-zinc-900/40">${t}</span>`).join('')}
+                        </div>
+                        <div class="mt-6 flex items-center gap-3">
+                            <i data-lucide="gamepad-2" class="w-5 h-5"></i> <span class="font-medium">Интересы</span>
+                        </div>
+                        <div class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">${langData.interests}</div>
+                    </div>
+                </div>
+            `;
+            mainContent.appendChild(aboutSection);
+
+            // SKILLS
+            const skillsSection = createSection('skills', langData.sections.skills);
+            const skillsContent = skillsSection.querySelector('#content-skills');
+            skillsContent.innerHTML = `<div class="grid md:grid-cols-2 gap-6" id="skills-container"></div>`;
+            mainContent.appendChild(skillsSection);
+            renderProgress('skills-container', langData.skills);
+
+            // PROJECTS
+            const projectsSection = createSection('projects', langData.sections.projects);
+            const projectsContent = projectsSection.querySelector('#content-projects');
+            projectsContent.innerHTML = `
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    ${langData.projects.map(p => `
+                        <article class="p-6 rounded-2xl ${glass} flex flex-col animate-on-scroll">
+                            <div class="flex items-start justify-between gap-3">
+                                <h3 class="text-lg font-semibold leading-tight">${p.title}</h3>
+                                <i data-lucide="award" class="w-5 h-5 opacity-70"></i>
+                            </div>
+                            <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">${p.description}</p>
+                            <div class="mt-3 flex flex-wrap gap-2">
+                                ${p.stack.map(s => `<span class="px-3 py-1 rounded-full text-sm border border-white/20 dark:border-zinc-700/60 bg-white/50 dark:bg-zinc-900/40">${s}</span>`).join('')}
+                            </div>
+                            ${p.highlight ? `
+                            <div class="mt-3 text-sm inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-amber-100/60 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200">
+                                <i data-lucide="trophy" class="w-4 h-4"></i> ${p.highlight}
+                            </div>` : ''}
+                            <a href="#contact" class="mt-4 inline-flex items-center gap-2 text-violet-600 dark:text-cyan-300 hover:underline">
+                                Подробнее / связаться <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                            </a>
+                        </article>
+                    `).join('')}
+                </div>
+            `;
+            mainContent.appendChild(projectsSection);
+
+            // AWARDS
+            const awardsSection = createSection('awards', langData.sections.awards);
+            const awardsContent = awardsSection.querySelector('#content-awards');
+            awardsContent.innerHTML = `
+                <div class="grid md:grid-cols-2 gap-6">
+                    ${langData.awards.map(a => `
+                        <div class="p-6 rounded-2xl ${glass} flex items-start gap-4 animate-on-scroll">
+                            <i data-lucide="trophy" class="w-6 h-6 shrink-0"></i>
+                            <div>
+                                <div class="font-semibold">${a.title}</div>
+                                <div class="text-sm opacity-80">${a.place}</div>
+                                <div class="text-sm text-zinc-600 dark:text-zinc-400">${a.details}</div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            mainContent.appendChild(awardsSection);
+
+            // EXPERIENCE
+            const experienceSection = createSection('experience', langData.sections.experience);
+            const experienceContent = experienceSection.querySelector('#content-experience');
+            experienceContent.innerHTML = `
+                <div class="space-y-4">
+                    ${langData.experience.map(e => `
+                        <div class="p-6 rounded-2xl ${glass} animate-on-scroll">
+                            <div class="flex items-center justify-between">
+                                <div class="font-semibold">${e.role}</div>
+                                <div class="text-sm opacity-70">${e.time}</div>
+                            </div>
+                            <ul class="mt-3 grid sm:grid-cols-3 gap-2 text-sm">
+                                ${e.bullets.map(b => `<li class="flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4"></i>${b}</li>`).join('')}
+                            </ul>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            mainContent.appendChild(experienceSection);
+
+            // EDUCATION
+            const educationSection = createSection('education', langData.sections.education);
+            const educationContent = educationSection.querySelector('#content-education');
+            educationContent.innerHTML = `
+                <div class="p-6 rounded-2xl ${glass} animate-on-scroll">
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                        <div class="font-semibold">${langData.education.school}</div>
+                    </div>
+                    <div class="mt-2 text-sm">${langData.education.degree}</div>
+                    <div class="mt-1 text-sm opacity-80">${langData.education.gpa} • ${langData.education.extra}</div>
+                    <div class="mt-1 text-sm opacity-80">${langData.education.grad}</div>
+                    <div class="mt-1 text-sm opacity-80">${langData.education.english}</div>
+                </div>
+            `;
+            mainContent.appendChild(educationSection);
+
+            // CONTACT
+            const contactSection = createSection('contact', langData.sections.contact);
+            const contactContent = contactSection.querySelector('#content-contact');
+            contactContent.innerHTML = `
+                <div class="p-6 rounded-2xl ${glass}">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <p class="text-lg font-medium">${langData.contactCta}</p>
+                            <div class="mt-4 space-y-3 text-sm">
+                                <a href="mailto:${data.email}" class="flex items-center gap-2 hover:underline"><i data-lucide="mail" class="w-4 h-4"></i>${data.email}</a>
+                                <a href="tel:${data.phone}" class="flex items-center gap-2 hover:underline"><i data-lucide="phone" class="w-4 h-4"></i>${data.phone}</a>
+                                <a href="${data.telegram}" target="_blank" class="flex items-center gap-2 hover:underline"><i data-lucide="globe" class="w-4 h-4"></i>Telegram</a>
+                                <a href="${data.github}" target="_blank" class="flex items-center gap-2 hover:underline"><i data-lucide="github" class="w-4 h-4"></i>GitHub</a>
+                                <a href="${data.linkedin}" target="_blank" class="flex items-center gap-2 hover:underline"><i data-lucide="linkedin" class="w-4 h-4"></i>LinkedIn</a>
+                            </div>
+                        </div>
+                        <form id="contact-form" class="space-y-3">
+                            <input name="name" required placeholder="${langData.contactFormPlaceholders.name}" class="w-full px-4 py-3 rounded-xl border bg-transparent" />
+                            <input type="email" name="email" required placeholder="${langData.contactFormPlaceholders.email}" class="w-full px-4 py-3 rounded-xl border bg-transparent" />
+                            <textarea name="message" required rows="4" placeholder="${langData.contactFormPlaceholders.message}" class="w-full px-4 py-3 rounded-xl border bg-transparent"></textarea>
+                            <button type="submit" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-white font-medium shadow-lg hover:opacity-90 transition bg-gradient-to-r from-violet-600 to-cyan-500">
+                                <i data-lucide="rocket" class="w-4 h-4"></i> ${langData.hireMe}
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            `;
+            mainContent.appendChild(contactSection);
+
+            // Настройка анимации для заголовков секций
+            const sectionTitles = document.querySelectorAll(`h2`);
+            const titleObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = `translateY(0)`;
+                        entry.target.style.transition = `opacity 0.5s, transform 0.5s`;
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            sectionTitles.forEach(title => {
+                title.style.opacity = 0;
+                title.style.transform = `translateY(12px)`;
+                titleObserver.observe(title);
+            });
+
+            // Настройка анимации для карточек
+            const cards = document.querySelectorAll(`.animate-on-scroll`);
+            const cardObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = `translateY(0)`;
+                        entry.target.style.transition = `opacity 0.4s, transform 0.4s`;
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            cards.forEach(card => {
+                card.style.opacity = 0;
+                card.style.transform = `translateY(10px)`;
+                cardObserver.observe(card);
+            });
+        }
+
+        // Функция для применения темы и обновления иконки
+        function applyTheme(theme) {
+            const html = document.documentElement;
+            const isDark = theme === 'dark';
+
+            // Переключаем класс dark
+            html.classList.toggle('dark', isDark);
+            localStorage.setItem('theme', theme);
+            console.log('Applied theme:', theme, 'Class list:', html.classList.toString());
+
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            if (themeToggleBtn) {
+                themeToggleBtn.innerHTML = '';
+                const newIcon = document.createElement('i');
+                newIcon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+                newIcon.classList.add('w-4', 'h-4', isDark ? 'text-amber-500' : 'text-slate-500');
+                themeToggleBtn.appendChild(newIcon);
+                renderIcons();
+            }
+        }
+
+        // Общая функция для рендеринга всего контента
+        function renderContent(langCode) {
+            const langData = data.i18n[langCode];
+
+            // Навигация
+            document.getElementById('nav-name').textContent = data.name;
+            const navLinks = document.getElementById('nav-links');
+            navLinks.innerHTML = Object.keys(langData.sections).map(key =>
+                `<a href="#${key}" class="hover:opacity-80">${langData.sections[key]}</a>`
+            ).join('');
+
+            // Языковые кнопки
+            const langSwitcher = document.getElementById('language-switcher');
+            langSwitcher.innerHTML = data.languages.map(l =>
+                `<button data-lang="${l.code}" class="px-2.5 py-1 rounded-lg text-sm border ${currentLang === l.code ? 'border-violet-400' : 'border-zinc-300 dark:border-zinc-700'} hover:bg-zinc-200/60 dark:hover:bg-zinc-800/60 transition-colors duration-300" aria-label="Switch language to ${l.label}">
+                    <i data-lucide="languages" class="inline w-4 h-4 mr-1"></i>${l.label}
+                </button>`
+            ).join('');
+
+            // Добавляем обработчик событий для переключения языка
+            langSwitcher.querySelectorAll('button').forEach(button => {
+                button.addEventListener('click', () => {
+                    currentLang = button.dataset.lang;
+                    renderContent(currentLang);
+                });
+            });
+
+            // Герой (Hero)
+            document.getElementById('hero-title').textContent = langData.heroTitle;
+            document.getElementById('hero-subtitle').textContent = langData.heroSubtitle;
+            document.getElementById('hero-pills').innerHTML = `
+                <span class="px-3 py-1 rounded-full text-sm border border-white/20 dark:border-zinc-700/60 bg-white/50 dark:bg-zinc-900/40"><i data-lucide="map-pin" class="inline w-4 h-4 mr-1"></i>${data.location}</span>
+                <span class="px-3 py-1 rounded-full text-sm border border-white/20 dark:border-zinc-700/60 bg-white/50 dark:bg-zinc-900/40"><i data-lucide="globe" class="inline w-4 h-4 mr-1"></i>English B1</span>
+                <span class="px-3 py-1 rounded-full text-sm border border-white/20 dark:border-zinc-700/60 bg-white/50 dark:bg-zinc-900/40"><i data-lucide="smartphone" class="inline w-4 h-4 mr-1"></i>Android / Java</span>
+            `;
+            document.getElementById('hero-actions').innerHTML = `
+                <a href="#contact" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-white font-medium shadow-lg hover:opacity-90 transition bg-gradient-to-r from-violet-600 to-cyan-500">
+                    <i data-lucide="rocket" class="w-4 h-4"></i> ${langData.hireMe}
+                </a>
+                <a href="${data.resumeUrl}" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border hover:bg-white/60 dark:hover:bg-zinc-900/60 transition">
+                    <i data-lucide="download" class="w-4 h-4"></i> ${langData.viewCV}
+                </a>
+            `;
+
+            // Рендерим все остальные секции
+            renderSections(langData);
+
+            // Обработчик формы
+            document.getElementById('contact-form').onsubmit = (e) => {
+                e.preventDefault();
+                const form = e.currentTarget;
+                const formData = new FormData(form);
+                const subject = encodeURIComponent(`Письмо с сайта-портфолио: ${formData.get("name")}`);
+                const body = encodeURIComponent(`Имя: ${formData.get("name")}\nEmail: ${formData.get("email")}\nСообщение: ${formData.get("message")}`);
+                window.location.href = `mailto:${data.email}?subject=${subject}&body=${body}`;
+            };
+
+            // Footer
+            document.getElementById('footer-year').textContent = new Date().getFullYear();
+            document.getElementById('footer-name').textContent = data.name;
+
+            // После рендеринга всего, создаем иконки
+            renderIcons();
+        }
+
+        // Запуск при загрузке страницы
+        window.onload = function() {
+            // При загрузке страницы проверяем сохраненную тему
+            const savedTheme = localStorage.getItem('theme');
+            const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            let initialTheme = 'light';
+            if (savedTheme) {
+                initialTheme = savedTheme;
+            } else if (systemPrefersDark) {
+                initialTheme = 'dark';
+            }
+            applyTheme(initialTheme);
+            renderContent(currentLang);
+
+            // Добавляем обработчик событий для переключения темы
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            themeToggleBtn.addEventListener('click', () => {
+                const html = document.documentElement;
+                const newTheme = html.classList.contains('dark') ? 'light' : 'dark';
+                applyTheme(newTheme);
+            });
+        };
+    </script>
+</body>
+</html>

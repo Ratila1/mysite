@@ -1,0 +1,103 @@
+/* style.css */
+/* Тема и общие стили */
+:root {
+    --gradient-from: #d946ef;
+    --gradient-via: #8b5cf6;
+    --gradient-to: #06b6d4;
+    --glass-bg-light: rgba(255, 255, 255, 0.7);
+    --glass-border-light: rgba(255, 255, 255, 0.3);
+    --glass-bg-dark: rgba(39, 39, 42, 0.6);
+    --glass-border-dark: rgba(63, 63, 70, 0.5);
+}
+
+.gradient-bg {
+    background-image: linear-gradient(to top right, var(--gradient-from), var(--gradient-via), var(--gradient-to));
+}
+
+.glass-card {
+    backdrop-filter: blur(1rem);
+    background-color: var(--glass-bg-light);
+    border: 1px solid var(--glass-border-light);
+}
+
+.dark .glass-card {
+    background-color: var(--glass-bg-dark);
+    border-color: var(--glass-border-dark);
+}
+
+.pill {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.dark .pill {
+    border-color: rgba(63, 63, 70, 0.6);
+    background-color: rgba(39, 39, 42, 0.4);
+}
+
+.gradient-button {
+    background-image: linear-gradient(to right, #7c3aed, #06b6d4);
+}
+
+.section {
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+    scroll-margin-top: 6rem;
+}
+
+.section-title {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+    .section {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+    .section-title {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+    }
+}
+
+/* Анимации при прокрутке */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Стили для прогресс-бара */
+.progress-bar-container {
+    width: 100%;
+    height: 0.75rem;
+    border-radius: 9999px;
+    background-color: rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.dark .progress-bar-container {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.progress-bar-fill {
+    height: 100%;
+    border-radius: 9999px;
+    background-image: linear-gradient(to right, #8b5cf6, #22d3ee);
+    transition: width 0.8s ease-out;
+}
