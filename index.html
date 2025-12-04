@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-key="page-title">Даниил Ратников — Java Backend Developer</title>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="neu fade-up">
+    <nav>
+        <div class="logo" data-key="name">Даниил Ратников</div>
+        <div class="nav-links">
+            <a href="#about" data-key="nav-about">Обо мне</a>
+            <a href="#experience" data-key="nav-experience">Опыт работы</a>
+            <a href="#skills" data-key="nav-skills">Навыки</a>
+            <a href="#achievements" data-key="nav-achievements">Достижения</a>
+            <a href="#projects" data-key="nav-projects">Проекты</a>
+            <a href="#goals" data-key="nav-goals">Цели</a>
+            <a href="#education" data-key="nav-education">Образование</a>
+            <a href="#contact" data-key="nav-contact">Контакты</a>
+        </div>
+    </nav>
+</header>
+
+<section class="hero neu fade-up">
+    <h1 data-key="hero-title">Java Backend Developer</h1>
+    <p data-key="hero-text">
+        Разрабатываю высоконагруженные backend-системы и микросервисы на Java 17 + Spring Boot.<br>
+        4+ года коммерческого опыта • Архитектура • Производительность • Масштабирование • Работа в команде.<br>
+    </p>
+
+    <div class="hero-actions">
+        <button class="btn btn-primary" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})" data-key="contact-btn">Связаться</button>
+        <a href="resume.pdf" download class="btn btn-soft">
+            <div class="btn-content">
+                <i data-lucide="download"></i>
+                <span data-key="resume-btn">Резюме</span>
+            </div>
+        </a>
+    </div>
+</section>
+
+<!-- About -->
+<section id="about" class="reveal">
+    <h2 class="section-title" data-key="about-title">Обо мне</h2>
+    <div class="neu card" data-key="about-text">
+        <p>Backend-разработчик с коммерческим опытом более 4 лет. Основной стек — Java 17, Spring Boot, микросервисы, REST API, базы данных и интеграции с внешними сервисами.</p><br>
+        <p>Участвовал в проектах разного масштаба: от высоконагруженных Telegram-ботов и серверных ядер Android-приложений до EdTech-стартапов и hardware-решений. Отвечал за проектирование архитектуры, оптимизацию производительности, тестирование и координацию небольших команд.</p><br>
+        <p>Люблю чистый, поддерживаемый и масштабируемый код. Постоянно изучаю новые технологии, паттерны проектирования и подходы к системному дизайну.</p>
+    </div>
+</section>
+
+<!-- Experience -->
+<section id="experience" class="reveal">
+    <h2 class="section-title" data-key="experience-title">Опыт работы</h2>
+    <div class="grid grid-2">
+        <div class="neu card">
+            <h3 data-key="exp1-title">Java Developer / Chatbot Developer</h3>
+            <p><strong data-key="exp1-company">ИП Бордовский «БелБот»</strong> — <span data-key="exp1-period">Январь 2022 – Июль 2025 (3.5 года)</span></p>
+            <ul class="experience-list" data-key="exp1-list">
+                <li><i data-lucide="code-2"></i> Разработка и поддержка мессенджер-ботов (Telegram, VK, Discord) на Java</li>
+                <li><i data-lucide="layout-template"></i> Проектирование архитектуры, серверная логика, интеграции с внешними API</li>
+                <li><i data-lucide="users"></i> Планирование задач и распределение работы в команде из 2 человек</li>
+                <li><i data-lucide="database"></i> Создание и оптимизация БД пользователей и диалогов (SQLite → PostgreSQL)</li>
+                <li><i data-lucide="plus-circle"></i> Внедрение новых функций, работа с пользователями, устранение ошибок</li>
+                <li><i data-lucide="shield-check"></i> Поддержание стабильности и улучшение UX</li>
+            </ul>
+        </div>
+
+        <div class="neu card">
+            <h3 data-key="exp2-title">Фриланс-разработчик</h3>
+            <p><strong data-key="exp2-company">Fiverr, FL.ru, личные заказы</strong> — <span data-key="exp2-period">Июнь 2021 – н.в. (4+ года)</span></p>
+            <ul class="experience-list" data-key="exp2-list">
+                <li><i data-lucide="package"></i> Разработка под ключ: Android-приложения, Telegram-боты, backend</li>
+                <li><i data-lucide="message-circle"></i> Общение с заказчиками из США, Европы, СНГ — от ТЗ до сдачи</li>
+                <li><i data-lucide="figma"></i> Дизайн (Figma), архитектура, тестирование, деплой</li>
+                <li><i data-lucide="headphones"></i> Поддержка проектов после сдачи</li>
+                <li><i data-lucide="star"></i> 100% положительных отзывов на платформах</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="reveal">
+    <h2 class="section-title" data-key="skills-title">Навыки и технологии</h2>
+    <div class="neu card">
+        <div class="skills-grid">
+            <div class="skill-tag">Java 17</div>
+            <div class="skill-tag">Spring Boot, Web</div>
+            <div class="skill-tag">Spring MVC / Data / Security</div>
+            <div class="skill-tag">Hibernate / JPA</div>
+            <div class="skill-tag">REST API</div>
+            <div class="skill-tag">PostgreSQL</div>
+            <div class="skill-tag">MySQL</div>
+            <div class="skill-tag">Kafka</div>
+            <div class="skill-tag">Redis</div>
+            <div class="skill-tag">Docker</div>
+            <div class="skill-tag">Kubernetes</div>
+            <div class="skill-tag">Git / CI/CD</div>
+            <div class="skill-tag">JUnit 5</div>
+            <div class="skill-tag">Mockito</div>
+            <div class="skill-tag">Android (Java/Kotlin)</div>
+            <div class="skill-tag">English B1 → B2</div>
+        </div>
+    </div>
+</section>
+
+<!-- Achievements -->
+<section id="achievements" class="reveal">
+    <h2 class="section-title" data-key="achievements-title">Достижения</h2>
+
+    <div class="grid grid-3">
+        <div class="neu card">
+            <h3>1 место</h3>
+            <p data-key="ach1">Областной конкурс научно-технических разработок<br>Генератор электрических сигналов</p>
+            <div class="achievement-badge"><i data-lucide="trophy"></i> 1 место</div>
+        </div>
+        <div class="neu card">
+            <h3>2 место</h3>
+            <p data-key="ach2">Patriot.by — областной конкурс<br>2.5D платформер на Unreal Engine 5</p>
+            <div class="achievement-badge"><i data-lucide="trophy"></i> 2 место</div>
+        </div>
+        <div class="neu card">
+            <h3>3 место</h3>
+            <p data-key="ach3">Научная конференция инноваций<br>Telegram-бот колледжа</p>
+            <div class="achievement-badge"><i data-lucide="trophy"></i> 3 место</div>
+        </div>
+        <div class="neu card">
+            <h3 data-key="ach4-title">Финалист республиканского этапа</h3>
+            <p data-key="ach4">Findmate — поиск людей и команд</p>
+        </div>
+    </div>
+
+    <h2 class="section-title" style="margin-top:60px;" data-key="code-achievements-title">Ключевые достижения в кодинге</h2>
+    <div class="grid grid-3">
+        <div class="neu card">
+            <h3 data-key="code1-title">×5.7 ускорение поиска</h3>
+            <p data-key="code1-desc">Увеличил объём проверки арбитраж-бота с 70 до 400+ путей за 30 сек</p>
+            <div class="achievement-badge" style="background:#10b981"><i data-lucide="zap"></i> <span data-key="code1-badge">Performance</span></div>
+        </div>
+        <div class="neu card">
+            <h3 data-key="code2-title">Clean Architecture</h3>
+            <p data-key="code2-desc">Полностью перевёл крупное Android-приложение с MVVM на Clean</p>
+            <div class="achievement-badge" style="background:#8b5cf6"><i data-lucide="layers"></i> <span data-key="code2-badge">Рефакторинг</span></div>
+        </div>
+        <div class="neu card">
+            <h3 data-key="code3-title">−80% нагрузки на БД</h3>
+            <p data-key="code3-desc">Внедрил Redis-кэширование и оптимизацию запросов в высоконагруженном боте</p>
+            <div class="achievement-badge" style="background:#3b82f6"><i data-lucide="database"></i> <span data-key="code3-badge">Оптимизация</span></div>
+        </div>
+        <div class="neu card">
+            <h3 data-key="code4-title">CI/CD с нуля</h3>
+            <p data-key="code4-desc">Настроил автоматический деплой через GitHub Actions + Docker</p>
+            <div class="achievement-badge" style="background:#f59e0b"><i data-lucide="git-branch"></i> <span data-key="code4-badge">DevOps</span></div>
+        </div>
+        <div class="neu card">
+            <h3 data-key="code5-title">80% покрытие тестами</h3>
+            <p data-key="code5-desc">Написал юнит-тесты для критического модуля авторизации</p>
+            <div class="achievement-badge" style="background:#ec4899"><i data-lucide="check-circle"></i> <span data-key="code5-badge">Тестирование</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="reveal">
+    <h2 class="section-title" data-key="projects-title">Проекты</h2>
+    <div class="grid grid-3">
+        <a href="#" target="_blank" class="neu card project-link">
+            <h3 data-key="proj1-title">Noxi — обучение языкам во сне</h3>
+            <p data-key="proj1">Android • Java ~20k LOC<br>Фазы сна, TTS/SSML, трекинг<br>Готовится к «100 идей для Беларуси» 2025</p>
+        </a>
+        <a href="https://github.com/Ratila1/Findmate" target="_blank" class="neu card project-link">
+            <h3 data-key="proj2-title">Findmate</h3>
+            <p data-key="proj2">Android + backend • Java<br>Поиск людей и команд<br>Финалист республиканского конкурса</p>
+        </a>
+        <a href="#" target="_blank" class="neu card project-link">
+            <h3 data-key="proj3-title">Высоконагруженные Telegram-боты</h3>
+            <p data-key="proj3">Java + Spring Boot<br>Миллионы сообщений, интеграции<br>Коммерческий продукт</p>
+        </a>
+        <a href="#" class="neu card project-link">
+            <h3 data-key="proj4-title">2.5D платформер</h3>
+            <p data-key="proj4">Unreal Engine 5 • Blueprints<br>Кастомная физика и боёвка<br>2 место на Patriot.by</p>
+        </a>
+        <a href="#" class="neu card project-link">
+            <h3 data-key="proj5-title">Генератор электрических сигналов</h3>
+            <p data-key="proj5">Hardware + desktop-приложение<br>Синус, треугольник, меандр<br>1 место на областном конкурсе</p>
+        </a>
+    </div>
+</section>
+
+<!-- Goals -->
+<section id="goals" class="reveal">
+    <h2 class="section-title" data-key="goals-title">Цели и планы</h2>
+    <div class="neu card">
+        <div class="goal-item">
+            <i data-lucide="graduation-cap"></i>
+            <div>
+                <strong data-key="goal1-period">2026–2030</strong><br>
+                <span data-key="goal1">Бакалавриат «Инженер-программист»</span>
+            </div>
+        </div>
+        <div class="goal-item">
+            <i data-lucide="globe"></i>
+            <div>
+                <strong data-key="goal2-period">2030–2032</strong><br>
+                <span data-key="goal2">Магистратура по AI/ML в топовом зарубежном университете</span>
+            </div>
+        </div>
+        <div class="goal-item">
+            <i data-lucide="trending-up"></i>
+            <div>
+                <strong data-key="goal3-period">До 2030 года</strong><br>
+                <span data-key="goal3">Senior Java / Backend Engineer в международной компании</span>
+            </div>
+        </div>
+        <div class="goal-item">
+            <i data-lucide="zap"></i>
+            <div>
+                <strong data-key="goal4-period">Долгосрочно</strong><br>
+                <span data-key="goal4">Запуск собственного стартапа в EdTech / HealthTech</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Education -->
+<section id="education" class="reveal">
+    <h2 class="section-title" data-key="education-title">Образование</h2>
+    <div class="grid grid-2">
+        <div class="neu card">
+            <h3 data-key="edu-title">Гомельский государственный машиностроительный колледж</h3>
+            <p data-key="edu-text">
+                <strong>Специальность:</strong> Программист мобильных устройств (ССО)<br>
+                <strong>Окончание:</strong> февраль 2026<br>
+                <strong>Средний балл:</strong> 9.0 / 10<br>
+                <strong>Дополнительно:</strong> староста группы, активная внеучебная деятельность<br>
+                <strong>Английский:</strong> B1 → активно иду к B2
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="reveal">
+    <h2 class="section-title" data-key="contact-title">Контакты</h2>
+    <div class="neu card">
+        <p>Email: <b>ratnikovdaniil24@gmail.com</b></p>
+        <p>Телефон: <b>+375 (29) 179-97-07</b></p>
+        <p>Telegram: <b>@rat4la</b></p>
+        <br>
+        <div style="display:flex; gap:16px; flex-wrap:wrap;">
+            <a class="btn btn-soft" href="https://github.com/Ratila1" target="_blank"><i data-lucide="github"></i></a>
+            <a class="btn btn-soft" href="https://www.fiverr.com/rat1la" target="_blank"><i data-lucide="briefcase"></i></a>
+            <a class="btn btn-soft" href="https://www.linkedin.com/in/ратников-даниил-065203389/" target="_blank"><i data-lucide="linkedin"></i></a>
+            <a class="btn btn-soft" href="https://t.me/rat4la" target="_blank"><i data-lucide="send"></i></a>
+        </div>
+    </div>
+</section>
+
+<footer data-key="footer">© 2025 Даниил Ратников — Java Backend Developer</footer>
+
+<div id="floating-controls">
+    <button id="themeToggle" class="neu" title="Тема"><i data-lucide="sun"></i></button>
+    <button id="langToggle" class="neu" title="Язык"><i data-lucide="languages"></i></button>
+</div>
+
+<style>
+.project-link { text-decoration: none; color: inherit; transition: all 0.3s ease; }
+.project-link:hover { transform: translateY(-6px) !important; box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important; }
+
+.experience-list {
+    margin-top: 16px;
+    padding-left: 4px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+.experience-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+.experience-list i {
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+    flex-shrink: 0;
+    color: var(--primary, #6366f1);
+}
+</style>
+
+<script src="js/script.js"></script>
+</body>
+</html>
