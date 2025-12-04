@@ -134,7 +134,7 @@ const translations = {
         "code2-desc": "Fully migrated large Android app from MVVM to Clean Architecture",
         "code2-badge": "Refactoring",
         "code3-title": "−60% DB Load",
-        "code3-desc": "Implemented Redis caching reducing DB load by 80%",
+        "code3-desc": "Implemented Redis caching reducing DB load by 60%",
         "code3-badge": "Optimization",
         "code4-title": "CI/CD from Scratch",
         "code4-desc": "Built CI/CD pipeline from scratch (GitHub Actions + Docker)",
