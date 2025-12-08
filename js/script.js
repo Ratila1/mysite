@@ -66,7 +66,7 @@ const translations = {
         "proj4-title": "2.5D платформер",
         "proj4": "Unreal Engine 5 • Blueprints<br>Кастомная физика и боёвка<br>2 место на Patriot.by",
         "proj5-title": "Генератор электрических сигналов",
-        "proj5": "Hardware + desktop-приложение<br>Синус, треугольник, меандр<br>1 место на областном конкурсе",
+        "proj5": "Hardware + desktop-приложение<br>Синус, треугольник, меандр<br>1 место на республиканском конкурсе",
 
         "goals-title": "Цели и планы",
         "goal1-period": "2026–2030",
@@ -153,7 +153,7 @@ const translations = {
         "proj4-title": "2.5D Platformer",
         "proj4": "Unreal Engine 5 • Blueprints<br>Custom physics and combat<br>2nd place at Patriot.by",
         "proj5-title": "Signal Generator",
-        "proj5": "Hardware + desktop app<br>Sine, triangle, square waves<br>1st place at regional contest",
+        "proj5": "Hardware + desktop app<br>Sine, triangle, square waves<br>1st place in the national competition",
 
         "goals-title": "Goals & Plans",
         "goal1-period": "2026–2030",
