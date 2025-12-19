@@ -16,7 +16,14 @@
 <header class="neu fade-up">
     <nav>
         <div class="logo" data-key="name">Даниил Ратников</div>
-        <div class="nav-links">
+
+        <!-- Бургер-кнопка (только на мобильных) -->
+        <button class="burger-menu" aria-label="Открыть меню">
+            <i data-lucide="menu"></i>
+        </button>
+
+        <!-- Ссылки навигации -->
+        <div class="nav-links" id="navLinks">
             <a href="#about" data-key="nav-about">Обо мне</a>
             <a href="#experience" data-key="nav-experience">Опыт работы</a>
             <a href="#skills" data-key="nav-skills">Навыки</a>
@@ -59,37 +66,36 @@
 
 <!-- Experience — теперь BuildersApp идёт первым -->
 <section id="experience" class="reveal">
-    <h2 class="section-title">Опыт работы</h2>
+    <h2 class="section-title" data-key="experience-title">Опыт работы</h2>
     <div class="grid grid-2">
 
         <!-- BuildersApp — самое свежее -->
         <div class="neu card">
-            <h3>Junior Backend Developer (Remote)</h3>
-            <p><strong>BuildersApp</strong> — <span>Апрель 2025 – октябрь 2025 (7 месяцев)</span></p>
+            <h3 data-key="exp-ba-position">Junior Backend Developer (Remote)</h3>
+            <p><strong data-key="exp-ba-company">BuildersApp</strong> — <span data-key="exp-ba-period">Апрель 2025 – октябрь 2025 (7 месяцев)</span></p>
             <ul class="experience-list">
-                <li><i data-lucide="code-2"></i> С нуля написал Telegram-бота на Python + aiogram 3 — к октябрю 19 000+ активных пользователей</li>
-                <li><i data-lucide="credit-card"></i> Самостоятельно реализовал escrow-платежи и интеграцию со Stripe</li>
-                <li><i data-lucide="zap"></i> Перевёл бота на асинхронную архитектуру + Redis-кэш — время обработки заявок сократилось в 3–4 раза</li>
-                <li><i data-lucide="database"></i> Оптимизировал тяжёлые запросы к PostgreSQL — нагрузка на базу заметно снизилась</li>
-                <li><i data-lucide="check-square"></i> Добавил юнит/интеграционные тесты (pytest) — покрытие платёжных сценариев 80%+</li>
-                <li><i data-lucide="smartphone"></i> Выполнял задачи по Android-модулю на Java и Flutter (оплата, push-уведомления)</li>
+                <li><i data-lucide="code-2"></i> <span data-key="exp-ba-item1">С нуля написал Telegram-бота на Python + aiogram 3 — к октябрю 19 000+ активных пользователей</span></li>
+                <li><i data-lucide="credit-card"></i> <span data-key="exp-ba-item2">Самостоятельно реализовал escrow-платежи и интеграцию со Stripe</span></li>
+                <li><i data-lucide="zap"></i> <span data-key="exp-ba-item3">Перевёл бота на асинхронную архитектуру + Redis-кэш — время обработки заявок сократилось в 3–4 раза</span></li>
+                <li><i data-lucide="database"></i> <span data-key="exp-ba-item4">Оптимизировал тяжёлые запросы к PostgreSQL — нагрузка на базу заметно снизилась</span></li>
+                <li><i data-lucide="check-square"></i> <span data-key="exp-ba-item5">Добавил юнит/интеграционные тесты (pytest) — покрытие платёжных сценариев 80%+</span></li>
+                <li><i data-lucide="smartphone"></i> <span data-key="exp-ba-item6">Выполнял задачи по Android-модулю на Java и Flutter (оплата, push-уведомления)</span></li>
             </ul>
         </div>
 
         <!-- ИП Бордовский -->
         <div class="neu card">
-            <h3>Java Backend Developer</h3>
-            <p><strong>ИП Бордовский «БелБот» + прямые заказчики</strong> — <span>Январь 2022 – июль 2025 (3 года 7 месяцев)</span></p>
+            <h3 data-key="exp-ipb-position">Java Backend Developer</h3>
+            <p><strong data-key="exp-ipb-company">ИП Бордовский «БелБот» + прямые заказчики</strong> — <span data-key="exp-ipb-period">Январь 2022 – июль 2025 (3 года 7 месяцев)</span></p>
             <ul class="experience-list">
-                <li><i data-lucide="code-2"></i> Разработал 15+ коммерческих Telegram/VK-ботов на Java + Spring Boot</li>
-                <li><i data-lucide="layout-template"></i> Проектировал архитектуру по Clean Architecture</li>
-                <li><i data-lucide="message-square"></i> Внедрил Kafka в двух проектах — устранил потерю сообщений при пиках</li>
-                <li><i data-lucide="server"></i> Настроил Docker + Kubernetes и CI/CD — деплой с часов до 5–10 минут</li>
-                <li><i data-lucide="check-circle"></i> Поднял покрытие тестами до 75–80 % (JUnit 5 + Mockito)</li>
-                <li><i data-lucide="zap"></i> Ускорил критический алгоритм арбитража с 70 до 400+ операций за ~30 сек</li>
+                <li><i data-lucide="code-2"></i> <span data-key="exp-ipb-item1">Разработал 15+ коммерческих Telegram/VK-ботов на Java + Spring Boot</span></li>
+                <li><i data-lucide="layout-template"></i> <span data-key="exp-ipb-item2">Проектировал архитектуру по Clean Architecture</span></li>
+                <li><i data-lucide="message-square"></i> <span data-key="exp-ipb-item3">Внедрил Kafka в двух проектах — устранил потерю сообщений при пиках</span></li>
+                <li><i data-lucide="server"></i> <span data-key="exp-ipb-item4">Настроил Docker + Kubernetes и CI/CD — деплой с часов до 5–10 минут</span></li>
+                <li><i data-lucide="check-circle"></i> <span data-key="exp-ipb-item5">Поднял покрытие тестами до 75–80 % (JUnit 5 + Mockito)</span></li>
+                <li><i data-lucide="zap"></i> <span data-key="exp-ipb-item6">Ускорил критический алгоритм арбитража с 70 до 400+ операций за ~30 сек</span></li>
             </ul>
         </div>
-
     </div>
 </section>
 
@@ -124,19 +130,19 @@
 
     <div class="grid grid-3">
         <div class="neu card">
-            <h3>1 место</h3>
+            <h3 data-key="place-1st">1 место</h3>
             <p data-key="ach1">Республиканский конкурс научно-технических разработок<br>Генератор электрических сигналов</p>
-            <div class="achievement-badge"><i data-lucide="trophy"></i> 1 место</div>
+            <div class="achievement-badge"><i data-lucide="trophy"></i> <span data-key="place-1st">1 место</span></div>
         </div>
         <div class="neu card">
-            <h3>2 место</h3>
+            <h3 data-key="place-2nd">2 место</h3>
             <p data-key="ach2">Patriot.by — областной конкурс<br>2.5D платформер на Unreal Engine 5</p>
-            <div class="achievement-badge"><i data-lucide="trophy"></i> 2 место</div>
+            <div class="achievement-badge"><i data-lucide="trophy"></i> <span data-key="place-2nd">2 место</span></div>
         </div>
         <div class="neu card">
-            <h3>3 место</h3>
+            <h3 data-key="place-3rd">3 место</h3>
             <p data-key="ach3">Научная конференция инноваций<br>Telegram-бот колледжа</p>
-            <div class="achievement-badge"><i data-lucide="trophy"></i> 3 место</div>
+            <div class="achievement-badge"><i data-lucide="trophy"></i> <span data-key="place-3rd">3 место</span></div>
         </div>
         <div class="neu card">
             <h3 data-key="ach4-title">Финалист республиканского этапа</h3>
@@ -144,7 +150,7 @@
         </div>
     </div>
 
-    <h2 class="section-title" style="margin-top:60px;" data-key="code-achievements-title">Ключевые достижения в кодинге</h2>
+    <h2 class="section-title" style="margin-top:60px;" data-key="code-achievements-title">Ключевые достижения</h2>
     <div class="grid grid-3">
         <div class="neu card">
             <h3 data-key="code1-title">×5.7 ускорение поиска</h3>
@@ -270,6 +276,9 @@
             <a class="btn btn-soft" href="https://www.fiverr.com/rat1la" target="_blank"><i data-lucide="briefcase"></i></a>
             <a class="btn btn-soft" href="https://www.linkedin.com/in/ратников-даниил-065203389/" target="_blank"><i data-lucide="linkedin"></i></a>
             <a class="btn btn-soft" href="https://t.me/rat4la" target="_blank"><i data-lucide="send"></i></a>
+            <a class="btn btn-soft whatsapp-btn" href="https://wa.me/375291799707" target="_blank" title="WhatsApp">
+        <i data-lucide="message-circle"></i>
+    </a>
         </div>
     </div>
 </section>
