@@ -444,29 +444,25 @@ themeToggle.addEventListener('click', () => {
     localStorage.setItem('theme', isDark ? 'light' : 'dark');
 });
 
-// Применение перевода
+// Перевод
 function applyLanguage() {
     document.querySelectorAll('[data-key]').forEach(el => {
         const key = el.getAttribute('data-key');
-        const text = translations[currentLang][key];
-        if (text !== undefined) {
-            el.innerHTML = text;
-        }
+        const text = translations[currentLang]?.[key];
+        if (text) el.innerHTML = text;
     });
     document.documentElement.lang = currentLang;
-    document.title = translations[currentLang]["page-title"] || "Даниил Ратников — Java Backend Developer";
+    document.title = translations[currentLang]?.["page-title"] || "Даниил Ратников — Java Backend Developer";
 
-    // Подсказка на кнопке языка
     const langNames = { ru: "Русский", en: "English", es: "Español", de: "Deutsch", pl: "Polski" };
     document.getElementById('langToggle').title = langNames[currentLang] || "Язык";
 
     lucide.createIcons();
 }
 
-// Переключение языка по кругу (ТОЛЬКО ОДИН обработчик!)
 document.getElementById('langToggle').addEventListener('click', () => {
-    const currentIndex = languages.indexOf(currentLang);
-    currentLang = languages[(currentIndex + 1) % languages.length];
+    const idx = languages.indexOf(currentLang);
+    currentLang = languages[(idx + 1) % languages.length];
     localStorage.setItem('lang', currentLang);
     applyLanguage();
 });
@@ -474,9 +470,7 @@ document.getElementById('langToggle').addEventListener('click', () => {
 // Анимации появления
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
+        if (entry.isIntersecting) entry.target.classList.add('visible');
     });
 }, { threshold: 0.1 });
 
@@ -489,12 +483,9 @@ const navLinks = document.getElementById('navLinks');
 burger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
     burger.classList.toggle('active');
-
-    if (burger.classList.contains('active')) {
-        burger.innerHTML = '<i data-lucide="x"></i>';
-    } else {
-        burger.innerHTML = '<i data-lucide="menu"></i>';
-    }
+    burger.innerHTML = navLinks.classList.contains('active') 
+        ? '<i data-lucide="x"></i>' 
+        : '<i data-lucide="menu"></i>';
     lucide.createIcons();
 });
 
@@ -507,6 +498,34 @@ navLinks.querySelectorAll('a').forEach(link => {
     });
 });
 
-// Инициализация при загрузке
+// Обработка формы (AJAX)
+document.getElementById('contact-form')?.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const success = document.getElementById('form-success');
+    const error   = document.getElementById('form-error');
+
+    success.style.display = 'none';
+    error.style.display   = 'none';
+
+    try {
+        const res = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form)
+        });
+
+        if (res.ok) {
+            success.style.display = 'block';
+            form.reset();
+        } else {
+            error.style.display = 'block';
+        }
+    } catch (err) {
+        error.style.display = 'block';
+    }
+});
+
+// Инициализация
 applyLanguage();
 lucide.createIcons();

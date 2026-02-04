@@ -461,3 +461,119 @@ footer {
         display: none;
     }
 }
+/* --- Переменные и Темы --- */
+:root {
+    --bg: #e7e9ee;
+    --fg: #2d2d2d;
+    --card: #eceef3;
+    --accent: #6d5dfc;
+    --shadow-light: rgba(255, 255, 255, 0.9);
+    --shadow-dark: rgba(0, 0, 0, 0.18);
+    --icon: #6d5dfc;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] {
+    --bg: #181a1f;
+    --fg: #e0e0e0;
+    --card: #22262d;
+    --accent: #8c74fd;
+    --shadow-light: rgba(255, 255, 255, 0.05);
+    --shadow-dark: rgba(0, 0, 0, 0.4);
+    --icon: #8c74fd;
+}
+
+/* --- Базовые стили --- */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    transition: background 0.4s, color 0.4s;
+    overflow-x: hidden;
+}
+
+/* ... (все твои предыдущие стили остаются без изменений) ... */
+
+/* ──────────────────────────────────────────────── */
+/* Стили для формы обратной связи (добавлены)       */
+/* ──────────────────────────────────────────────── */
+
+.contact-form {
+    display: grid;
+    gap: 20px;
+    margin-top: 32px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: none;
+    background: var(--card);
+    box-shadow: inset 3px 3px 8px var(--shadow-dark),
+                inset -3px -3px 8px var(--shadow-light);
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--fg);
+    transition: all 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    box-shadow: inset 3px 3px 8px var(--shadow-dark),
+                inset -3px -3px 8px var(--shadow-light),
+                0 0 0 3px rgba(109, 93, 252, 0.2);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-submit-btn {
+    justify-self: start;
+}
+
+.form-success,
+.form-error {
+    padding: 16px;
+    border-radius: 12px;
+    font-weight: 500;
+    text-align: center;
+    display: none;
+}
+
+.form-success {
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+}
+
+.form-error {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+}
+
+.honeypot {
+    display: none !important;
+}
+
+/* ... остальной твой CSS (project-link, experience-list и т.д.) ... */
