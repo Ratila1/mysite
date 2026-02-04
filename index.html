@@ -266,8 +266,9 @@
                 <i data-lucide="message-circle"></i>
             </a>
         </div>
-
-        <h3 style="margin: 40px 0 20px; font-size: 1.4rem; color: var(--accent);">Написать мне напрямую</h3>
+    <h3 style="margin: 40px 0 20px; font-size: 1.4rem; color: var(--accent);" data-key="contact-direct">
+    Написать мне напрямую
+    </h3>
 
         <form id="contact-form" 
       action="https://formspree.io/f/xjgonzzv" 
@@ -281,17 +282,17 @@
     <input type="hidden" name="_subject" value="Сообщение с портфолио">
 
     <div>
-        <label for="name">Ваше имя</label>
+        <label for="name" data-key="label-name">Ваше имя</label>
         <input type="text" id="name" name="name" placeholder="Как к вам обращаться?" required>
     </div>
 
     <div>
-        <label for="email">Email</label>
+        <label for="email" data-key="label-email">Email</label>
         <input type="email" id="email" name="email" placeholder="ваш@email.com" required>
     </div>
 
     <div>
-        <label for="purpose">Цель сообщения</label>
+        <label for="purpose" data-key="label-purpose">Цель сообщения</label>
         <select id="purpose" name="purpose" required>
             <option value="" disabled selected>Выберите цель</option>
             <option value="заказ / проект / сотрудничество">Заказ / проект / сотрудничество</option>
@@ -302,14 +303,18 @@
     </div>
 
     <div>
-        <label for="message">Сообщение</label>
+        <label for="message" data-key="label-message">Сообщение</label>
         <textarea id="message" name="message" placeholder="Расскажите подробнее..." required></textarea>
     </div>
 
     <button type="submit" class="btn btn-primary form-submit-btn">Отправить сообщение</button>
 
-    <div id="form-success" class="form-success">Сообщение успешно отправлено! Скоро отвечу.</div>
-    <div id="form-error" class="form-error">Произошла ошибка. Попробуйте позже или напишите в Telegram @rat4la</div>
+    <div id="form-success" class="form-success" data-key="form-success">
+  Сообщение успешно отправлено! Скоро отвечу.
+</div>
+<div id="form-error" class="form-error" data-key="form-error">
+  Произошла ошибка. Попробуйте позже или напишите в Telegram @rat4la
+</div>
 </form>
     </div>
 </section>
