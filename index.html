@@ -17,12 +17,10 @@
     <nav>
         <div class="logo" data-key="name">Даниил Ратников</div>
 
-        <!-- Бургер-кнопка (только на мобильных) -->
         <button class="burger-menu" aria-label="Открыть меню">
             <i data-lucide="menu"></i>
         </button>
 
-        <!-- Ссылки навигации -->
         <div class="nav-links" id="navLinks">
             <a href="#about" data-key="nav-about">Обо мне</a>
             <a href="#experience" data-key="nav-experience">Опыт работы</a>
@@ -54,7 +52,6 @@
     </div>
 </section>
 
-<!-- About -->
 <section id="about" class="reveal">
     <h2 class="section-title" data-key="about-title">Обо мне</h2>
     <div class="neu card" data-key="about-text">
@@ -64,12 +61,9 @@
     </div>
 </section>
 
-<!-- Experience — теперь BuildersApp идёт первым -->
 <section id="experience" class="reveal">
     <h2 class="section-title" data-key="experience-title">Опыт работы</h2>
     <div class="grid grid-2">
-
-        <!-- BuildersApp — самое свежее -->
         <div class="neu card">
             <h3 data-key="exp-ba-position">Junior Backend Developer (Remote)</h3>
             <p><strong data-key="exp-ba-company">BuildersApp</strong> — <span data-key="exp-ba-period">Апрель 2025 – октябрь 2025 (7 месяцев)</span></p>
@@ -83,7 +77,6 @@
             </ul>
         </div>
 
-        <!-- ИП Бордовский -->
         <div class="neu card">
             <h3 data-key="exp-ipb-position">Java Backend Developer</h3>
             <p><strong data-key="exp-ipb-company">ИП Бордовский «БелБот» + прямые заказчики</strong> — <span data-key="exp-ipb-period">Январь 2022 – июль 2025 (3 года 7 месяцев)</span></p>
@@ -123,11 +116,8 @@
     </div>
 </section>
 
-
-<!-- Achievements -->
 <section id="achievements" class="reveal">
     <h2 class="section-title" data-key="achievements-title">Достижения</h2>
-
     <div class="grid grid-3">
         <div class="neu card">
             <h3 data-key="place-1st">1 место</h3>
@@ -180,7 +170,6 @@
     </div>
 </section>
 
-<!-- Projects -->
 <section id="projects" class="reveal">
     <h2 class="section-title" data-key="projects-title">Проекты</h2>
     <div class="grid grid-3">
@@ -193,13 +182,13 @@
             <p data-key="proj2">Android + backend • Java<br>Поиск людей и команд<br>Финалист республиканского конкурса</p>
         </a>
         <a href="#" target="_blank" class="neu card project-link">
-            <h3 data-key="proj3-title">Высоконагруженные Telegram-боты</h3>
-            <p data-key="proj3">
+            <h3 data-key="proj3-title">Высоконагруженные Telegram-боты</h3>
+            <p data-key="proj3">
                 Java (Spring Boot) / Python<br>
                 Разработка и поддержка модулей на двух стеках.<br>
                 Миллионы сообщений, интеграции, коммерческий продукт.
             </p>
-        </a>
+        </a>
         <a href="#" class="neu card project-link">
             <h3 data-key="proj4-title">2.5D платформер</h3>
             <p data-key="proj4">Unreal Engine 5 • Blueprints<br>Кастомная физика и боёвка<br>2 место на Patriot.by</p>
@@ -211,7 +200,6 @@
     </div>
 </section>
 
-<!-- Goals -->
 <section id="goals" class="reveal">
     <h2 class="section-title" data-key="goals-title">Цели и планы</h2>
     <div class="neu card">
@@ -246,7 +234,6 @@
     </div>
 </section>
 
-<!-- Education -->
 <section id="education" class="reveal">
     <h2 class="section-title" data-key="education-title">Образование</h2>
     <div class="grid grid-2">
@@ -263,7 +250,6 @@
     </div>
 </section>
 
-<!-- Contact -->
 <section id="contact" class="reveal">
     <h2 class="section-title" data-key="contact-title">Контакты</h2>
     <div class="neu card">
@@ -277,9 +263,51 @@
             <a class="btn btn-soft" href="https://www.linkedin.com/in/ратников-даниил-065203389/" target="_blank"><i data-lucide="linkedin"></i></a>
             <a class="btn btn-soft" href="https://t.me/rat4la" target="_blank"><i data-lucide="send"></i></a>
             <a class="btn btn-soft whatsapp-btn" href="https://wa.me/375291799707" target="_blank" title="WhatsApp">
-        <i data-lucide="message-circle"></i>
-    </a>
+                <i data-lucide="message-circle"></i>
+            </a>
         </div>
+
+        <h3 style="margin: 40px 0 20px; font-size: 1.4rem; color: var(--accent);">Написать мне напрямую</h3>
+
+        <form id="contact-form" 
+              action="https://formsubmit.co/ratnikovdaniil24@gmail.com" 
+              method="POST"
+              class="contact-form neu">
+
+            <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off">
+            <input type="hidden" name="_subject" value="Сообщение с портфолио — {purpose}">
+
+            <div>
+                <label for="name">Ваше имя</label>
+                <input type="text" id="name" name="name" placeholder="Как к вам обращаться?" required>
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="ваш@email.com" required>
+            </div>
+
+            <div>
+                <label for="purpose">Цель сообщения</label>
+                <select id="purpose" name="purpose" required>
+                    <option value="" disabled selected>Выберите цель</option>
+                    <option value="заказ / проект / сотрудничество">Заказ / проект / сотрудничество</option>
+                    <option value="вакансия / работа">Предложение по вакансии / работа</option>
+                    <option value="знакомство / общение">Просто познакомиться / пообщаться</option>
+                    <option value="другое">Другое</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="message">Сообщение</label>
+                <textarea id="message" name="message" placeholder="Расскажите подробнее..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit-btn">Отправить сообщение</button>
+
+            <div id="form-success" class="form-success">Сообщение успешно отправлено! Скоро отвечу.</div>
+            <div id="form-error" class="form-error">Произошла ошибка. Попробуйте позже или напишите в Telegram @rat4la</div>
+        </form>
     </div>
 </section>
 
@@ -289,34 +317,6 @@
     <button id="themeToggle" class="neu" title="Тема"><i data-lucide="sun"></i></button>
     <button id="langToggle" class="neu" title="Язык"><i data-lucide="languages"></i></button>
 </div>
-
-<style>
-.project-link { text-decoration: none; color: inherit; transition: all 0.3s ease; }
-.project-link:hover { transform: translateY(-6px) !important; box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important; }
-
-.experience-list {
-    margin-top: 16px;
-    padding-left: 4px;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-.experience-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-}
-.experience-list i {
-    width: 18px;
-    height: 18px;
-    margin-top: 3px;
-    flex-shrink: 0;
-    color: var(--primary, #6366f1);
-}
-</style>
 
 <script src="js/script.js"></script>
 </body>
