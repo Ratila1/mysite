@@ -270,44 +270,47 @@
         <h3 style="margin: 40px 0 20px; font-size: 1.4rem; color: var(--accent);">Написать мне напрямую</h3>
 
         <form id="contact-form" 
-              action="https://formsubmit.co/weldet2007@gmail.com" 
-              method="POST"
-              class="contact-form neu">
+      action="https://formspree.io/f/xjgonzzv" 
+      method="POST"
+      class="contact-form neu">
 
-            <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off">
-            <input type="hidden" name="_subject" value="Сообщение с портфолио — {purpose}">
+    <!-- honeypot под Formspree -->
+    <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off">
 
-            <div>
-                <label for="name">Ваше имя</label>
-                <input type="text" id="name" name="name" placeholder="Как к вам обращаться?" required>
-            </div>
+    <!-- тема письма -->
+    <input type="hidden" name="_subject" value="Сообщение с портфолио">
 
-            <div>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="ваш@email.com" required>
-            </div>
+    <div>
+        <label for="name">Ваше имя</label>
+        <input type="text" id="name" name="name" placeholder="Как к вам обращаться?" required>
+    </div>
 
-            <div>
-                <label for="purpose">Цель сообщения</label>
-                <select id="purpose" name="purpose" required>
-                    <option value="" disabled selected>Выберите цель</option>
-                    <option value="заказ / проект / сотрудничество">Заказ / проект / сотрудничество</option>
-                    <option value="вакансия / работа">Предложение по вакансии / работа</option>
-                    <option value="знакомство / общение">Просто познакомиться / пообщаться</option>
-                    <option value="другое">Другое</option>
-                </select>
-            </div>
+    <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="ваш@email.com" required>
+    </div>
 
-            <div>
-                <label for="message">Сообщение</label>
-                <textarea id="message" name="message" placeholder="Расскажите подробнее..." required></textarea>
-            </div>
+    <div>
+        <label for="purpose">Цель сообщения</label>
+        <select id="purpose" name="purpose" required>
+            <option value="" disabled selected>Выберите цель</option>
+            <option value="заказ / проект / сотрудничество">Заказ / проект / сотрудничество</option>
+            <option value="вакансия / работа">Предложение по вакансии / работа</option>
+            <option value="знакомство / общение">Просто познакомиться / пообщаться</option>
+            <option value="другое">Другое</option>
+        </select>
+    </div>
 
-            <button type="submit" class="btn btn-primary form-submit-btn">Отправить сообщение</button>
+    <div>
+        <label for="message">Сообщение</label>
+        <textarea id="message" name="message" placeholder="Расскажите подробнее..." required></textarea>
+    </div>
 
-            <div id="form-success" class="form-success">Сообщение успешно отправлено! Скоро отвечу.</div>
-            <div id="form-error" class="form-error">Произошла ошибка. Попробуйте позже или напишите в Telegram @rat4la</div>
-        </form>
+    <button type="submit" class="btn btn-primary form-submit-btn">Отправить сообщение</button>
+
+    <div id="form-success" class="form-success">Сообщение успешно отправлено! Скоро отвечу.</div>
+    <div id="form-error" class="form-error">Произошла ошибка. Попробуйте позже или напишите в Telegram @rat4la</div>
+</form>
     </div>
 </section>
 

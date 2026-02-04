@@ -498,7 +498,6 @@ navLinks.querySelectorAll('a').forEach(link => {
     });
 });
 
-// Обработка формы (AJAX)
 document.getElementById('contact-form')?.addEventListener('submit', async function(e) {
     e.preventDefault();
 
@@ -512,6 +511,7 @@ document.getElementById('contact-form')?.addEventListener('submit', async functi
     try {
         const res = await fetch(form.action, {
             method: 'POST',
+            headers: { 'Accept': 'application/json' },
             body: new FormData(form)
         });
 
@@ -525,6 +525,7 @@ document.getElementById('contact-form')?.addEventListener('submit', async functi
         error.style.display = 'block';
     }
 });
+
 
 // Инициализация
 applyLanguage();
