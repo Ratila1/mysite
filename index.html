@@ -27,6 +27,7 @@
         <li><a href="#skills"       class="nav__link" data-key="nav_skills">Навыки</a></li>
         <li><a href="#achievements" class="nav__link" data-key="nav_achievements">Достижения</a></li>
         <li><a href="#projects"     class="nav__link" data-key="nav_projects">Проекты</a></li>
+        <li><a href="#publications" class="nav__link" data-key="nav_pub">Статьи</a></li>
         <li><a href="#goals"        class="nav__link" data-key="nav_goals">Цели</a></li>
         <li><a href="#education"    class="nav__link" data-key="nav_edu">Образование</a></li>
         <li><a href="#contact"      class="nav__link" data-key="nav_contact">Контакты</a></li>
@@ -39,7 +40,7 @@
         <button class="btn-icon lang-btn" id="langToggle" aria-label="Change language">
           <span id="langLabel">РУ</span>
         </button>
-        <button class="burger" id="burger" aria-label="Menu">
+        <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -47,18 +48,24 @@
   </nav>
 
   <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobileMenu">
-    <button class="mobile-menu__close" id="mobileClose" aria-label="Close"><i data-lucide="x"></i></button>
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <ul class="mobile-menu__links">
-      <li><a href="#about"        data-key="nav_about">Обо мне</a></li>
-      <li><a href="#experience"   data-key="nav_exp">Опыт</a></li>
-      <li><a href="#skills"       data-key="nav_skills">Навыки</a></li>
-      <li><a href="#achievements" data-key="nav_achievements">Достижения</a></li>
-      <li><a href="#projects"     data-key="nav_projects">Проекты</a></li>
-      <li><a href="#goals"        data-key="nav_goals">Цели</a></li>
-      <li><a href="#education"    data-key="nav_edu">Образование</a></li>
-      <li><a href="#contact"      data-key="nav_contact">Контакты</a></li>
+      <li style="--i:1"><a href="#about"        data-key="nav_about">Обо мне</a></li>
+      <li style="--i:2"><a href="#experience"   data-key="nav_exp">Опыт</a></li>
+      <li style="--i:3"><a href="#skills"       data-key="nav_skills">Навыки</a></li>
+      <li style="--i:4"><a href="#achievements" data-key="nav_achievements">Достижения</a></li>
+      <li style="--i:5"><a href="#projects"     data-key="nav_projects">Проекты</a></li>
+      <li style="--i:6"><a href="#publications" data-key="nav_pub">Статьи</a></li>
+      <li style="--i:7"><a href="#goals"        data-key="nav_goals">Цели</a></li>
+      <li style="--i:8"><a href="#education"    data-key="nav_edu">Образование</a></li>
+      <li style="--i:9"><a href="#contact"      data-key="nav_contact">Контакты</a></li>
     </ul>
+    <div class="mobile-menu__footer">
+      <a href="https://github.com/Ratila1" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i></a>
+      <a href="https://habr.com/ru/users/Ratila/articles/" target="_blank" rel="noopener" aria-label="Habr"><i data-lucide="book-open"></i></a>
+      <a href="https://dev.to/ratila" target="_blank" rel="noopener" aria-label="DEV Community"><i data-lucide="code-2"></i></a>
+      <a href="mailto:ratila@mail.ru" aria-label="Email"><i data-lucide="mail"></i></a>
+    </div>
   </div>
 
   <main>
@@ -222,39 +229,39 @@
             <div class="tl-card">
               <div class="tl-header">
                 <div>
-                  <span class="tl-period">Апр 2025 — Окт 2025</span>
-                  <h3 class="tl-role">Backend Developer</h3>
+                  <span class="tl-period" data-key="j1_period">Апр 2025 — Окт 2025</span>
+                  <h3 class="tl-role" data-key="j1_role">Backend Developer</h3>
                   <div class="tl-company">
                     <i data-lucide="building-2"></i>
                     <span>BuildersApp (HimishApp)</span>
                     <span class="badge badge--remote" data-key="remote">Удалённо</span>
                   </div>
                 </div>
-                <span class="tl-dur">7 мес.</span>
+                <span class="tl-dur" data-key="j1_dur">7 мес.</span>
               </div>
 
-              <p class="tl-team"><i data-lucide="users"></i>Команда 5–6 человек · поддержка существующих проектов + разработка нового сервиса</p>
+              <p class="tl-team"><i data-lucide="users"></i><span data-key="j1_team">Команда 5–6 человек · поддержка существующих проектов + разработка нового сервиса</span></p>
 
               <!-- HR brief -->
-              <div class="tl-section-sep"><span>Результаты</span></div>
+              <div class="tl-section-sep"><span data-key="sep_results">Результаты</span></div>
               <ul class="tl-achs tl-achs--hr">
-                <li><span class="ai" style="--c:#6d5dfc"><i data-lucide="trending-up"></i></span><span>Создал бота с нуля — <strong>19 000+ пользователей</strong> за 6 месяцев, retention +25%</span></li>
-                <li><span class="ai" style="--c:#3fc58e"><i data-lucide="shield-check"></i></span><span>Реализовал платёжную систему с эскроу — безопасные транзакции для тысяч пользователей</span></li>
-                <li><span class="ai" style="--c:#f59e0b"><i data-lucide="zap"></i></span><span>Ускорил обработку заявок — <strong>в 3–4 раза</strong> при пиковых нагрузках</span></li>
-                <li><span class="ai" style="--c:#4facfe"><i data-lucide="database"></i></span><span>Снизил нагрузку на базу данных — <strong>на 30–40%</strong> при 5× росте аудитории, без downtime</span></li>
-                <li><span class="ai" style="--c:#f857a6"><i data-lucide="test-tube-2"></i></span><span>Тестовое покрытие платёжных сценариев — <strong>80%+</strong>, регрессии устранены</span></li>
-                <li><span class="ai" style="--c:#a78bfa"><i data-lucide="smartphone"></i></span><span>Реализовал экраны оплаты и push-уведомления в мобильном приложении</span></li>
+                <li><span class="ai" style="--c:#6d5dfc"><i data-lucide="trending-up"></i></span><span data-key="j1_hr1">Создал бота с нуля — <strong>19 000+ пользователей</strong> за 6 месяцев, retention +25%</span></li>
+                <li><span class="ai" style="--c:#3fc58e"><i data-lucide="shield-check"></i></span><span data-key="j1_hr2">Реализовал платёжную систему с эскроу — безопасные транзакции для тысяч пользователей</span></li>
+                <li><span class="ai" style="--c:#f59e0b"><i data-lucide="zap"></i></span><span data-key="j1_hr3">Ускорил обработку заявок — <strong>в 3–4 раза</strong> при пиковых нагрузках</span></li>
+                <li><span class="ai" style="--c:#4facfe"><i data-lucide="database"></i></span><span data-key="j1_hr4">Снизил нагрузку на базу данных — <strong>на 30–40%</strong> при 5× росте аудитории, без downtime</span></li>
+                <li><span class="ai" style="--c:#f857a6"><i data-lucide="test-tube-2"></i></span><span data-key="j1_hr5">Тестовое покрытие платёжных сценариев — <strong>80%+</strong>, регрессии устранены</span></li>
+                <li><span class="ai" style="--c:#a78bfa"><i data-lucide="smartphone"></i></span><span data-key="j1_hr6">Реализовал экраны оплаты и push-уведомления в мобильном приложении</span></li>
               </ul>
 
               <!-- Tech detail -->
-              <div class="tl-section-sep"><span>Для тех. специалиста</span></div>
+              <div class="tl-section-sep"><span data-key="sep_tech">Для тех. специалиста</span></div>
               <ul class="tl-achs">
-                <li><span class="ai" style="--c:#3fc58e"><i data-lucide="bot"></i></span><span>Python + aiogram 3 + asyncio, интеграция со Spring Boot бэкендом — Telegram-бот с нуля</span></li>
-                <li><span class="ai" style="--c:#6d5dfc"><i data-lucide="credit-card"></i></span><span>Escrow-логика и интеграция Stripe в микросервисной архитектуре — безопасные транзакции</span></li>
-                <li><span class="ai" style="--c:#f59e0b"><i data-lucide="layers"></i></span><span>Асинхронная архитектура + Redis cache-aside + PostgreSQL — 3–4× быстрее при пиковой нагрузке</span></li>
-                <li><span class="ai" style="--c:#4facfe"><i data-lucide="database"></i></span><span>Оптимизация тяжёлых SQL через Hibernate — −30–40% нагрузки на БД при росте пользователей</span></li>
-                <li><span class="ai" style="--c:#f857a6"><i data-lucide="test-tube-2"></i></span><span>pytest + JUnit 5 + Mockito на платёжные сценарии — покрытие 80%+, регрессии устранены</span></li>
-                <li><span class="ai" style="--c:#a78bfa"><i data-lucide="smartphone"></i></span><span>Нативный Android-модуль (Java) + Flutter в CI/CD пайплайне: экраны оплаты, push-уведомления</span></li>
+                <li><span class="ai" style="--c:#3fc58e"><i data-lucide="bot"></i></span><span data-key="j1_t1">Python + aiogram 3 + asyncio, интеграция со Spring Boot бэкендом — Telegram-бот с нуля</span></li>
+                <li><span class="ai" style="--c:#6d5dfc"><i data-lucide="credit-card"></i></span><span data-key="j1_t2">Escrow-логика и интеграция Stripe в микросервисной архитектуре — безопасные транзакции</span></li>
+                <li><span class="ai" style="--c:#f59e0b"><i data-lucide="layers"></i></span><span data-key="j1_t3">Асинхронная архитектура + Redis cache-aside + PostgreSQL — 3–4× быстрее при пиковой нагрузке</span></li>
+                <li><span class="ai" style="--c:#4facfe"><i data-lucide="database"></i></span><span data-key="j1_t4">Оптимизация тяжёлых SQL через Hibernate — −30–40% нагрузки на БД при росте пользователей</span></li>
+                <li><span class="ai" style="--c:#f857a6"><i data-lucide="test-tube-2"></i></span><span data-key="j1_t5">pytest + JUnit 5 + Mockito на платёжные сценарии — покрытие 80%+, регрессии устранены</span></li>
+                <li><span class="ai" style="--c:#a78bfa"><i data-lucide="smartphone"></i></span><span data-key="j1_t6">Нативный Android-модуль (Java) + Flutter в CI/CD пайплайне: экраны оплаты, push-уведомления</span></li>
               </ul>
 
               <div class="tech-stack">
@@ -271,39 +278,39 @@
             <div class="tl-card">
               <div class="tl-header">
                 <div>
-                  <span class="tl-period">Янв 2022 — Июл 2025</span>
-                  <h3 class="tl-role">Backend Developer</h3>
+                  <span class="tl-period" data-key="j2_period">Янв 2022 — Июл 2025</span>
+                  <h3 class="tl-role" data-key="j2_role">Backend Developer</h3>
                   <div class="tl-company">
                     <i data-lucide="building-2"></i>
                     <span>ИП Бордовский «БелБот»</span>
-                    <span class="badge badge--remote">Аутсорс · Беларусь</span>
+                    <span class="badge badge--remote" data-key="j2_outsource">Аутсорс · Беларусь</span>
                   </div>
                 </div>
-                <span class="tl-dur">3.5 г.</span>
+                <span class="tl-dur" data-key="j2_dur">3.5 г.</span>
               </div>
 
-              <p class="tl-team"><i data-lucide="users"></i>Команда 3 человека (frontend, тимлид, я — backend) · Agile / Jira · аутсорс</p>
+              <p class="tl-team"><i data-lucide="users"></i><span data-key="j2_team">Команда 3 человека (frontend, тимлид, я — backend) · Agile / Jira · аутсорс</span></p>
 
               <!-- HR brief -->
-              <div class="tl-section-sep"><span>Результаты</span></div>
+              <div class="tl-section-sep"><span data-key="sep_results">Результаты</span></div>
               <ul class="tl-achs tl-achs--hr">
-                <li><span class="ai" style="--c:#6d5dfc"><i data-lucide="package"></i></span><span>Разработал <strong>15+ коммерческих продуктов</strong> — от ТЗ до релиза, всё в срок</span></li>
-                <li><span class="ai" style="--c:#f59e0b"><i data-lucide="message-square"></i></span><span>Устранил потерю сообщений при пиковых нагрузках — стабильность <strong>+50%</strong></span></li>
-                <li><span class="ai" style="--c:#3fc58e"><i data-lucide="rocket"></i></span><span>Сократил время выката обновлений — <strong>с нескольких часов до 5–10 минут</strong></span></li>
-                <li><span class="ai" style="--c:#f857a6"><i data-lucide="test-tube-2"></i></span><span>Поднял тестовое покрытие до <strong>75–80%</strong> — регрессии практически исчезли</span></li>
-                <li><span class="ai" style="--c:#4facfe"><i data-lucide="trending-up"></i></span><span>Ускорил ключевой алгоритм в <strong>6×</strong> — с 70 до 400+ операций за 30 секунд</span></li>
-                <li><span class="ai" style="--c:#a78bfa"><i data-lucide="users"></i></span><span>Вёл проекты от ТЗ до продакшена — координировал с бизнесом и frontend без задержек</span></li>
+                <li><span class="ai" style="--c:#6d5dfc"><i data-lucide="package"></i></span><span data-key="j2_hr1">Разработал <strong>15+ коммерческих продуктов</strong> — от ТЗ до релиза, всё в срок</span></li>
+                <li><span class="ai" style="--c:#f59e0b"><i data-lucide="message-square"></i></span><span data-key="j2_hr2">Устранил потерю сообщений при пиковых нагрузках — стабильность <strong>+50%</strong></span></li>
+                <li><span class="ai" style="--c:#3fc58e"><i data-lucide="rocket"></i></span><span data-key="j2_hr3">Сократил время выката обновлений — <strong>с нескольких часов до 5–10 минут</strong></span></li>
+                <li><span class="ai" style="--c:#f857a6"><i data-lucide="test-tube-2"></i></span><span data-key="j2_hr4">Поднял тестовое покрытие до <strong>75–80%</strong> — регрессии практически исчезли</span></li>
+                <li><span class="ai" style="--c:#4facfe"><i data-lucide="trending-up"></i></span><span data-key="j2_hr5">Ускорил ключевой алгоритм в <strong>6×</strong> — с 70 до 400+ операций за 30 секунд</span></li>
+                <li><span class="ai" style="--c:#a78bfa"><i data-lucide="users"></i></span><span data-key="j2_hr6">Вёл проекты от ТЗ до продакшена — координировал с бизнесом и frontend без задержек</span></li>
               </ul>
 
               <!-- Tech detail -->
-              <div class="tl-section-sep"><span>Для тех. специалиста</span></div>
+              <div class="tl-section-sep"><span data-key="sep_tech">Для тех. специалиста</span></div>
               <ul class="tl-achs">
-                <li><span class="ai" style="--c:#6d5dfc"><i data-lucide="bot"></i></span><span>Java + Spring Boot, 15+ Telegram/VK-ботов в Agile/Jira (интернет-магазины, CRM, арбитраж)</span></li>
-                <li><span class="ai" style="--c:#f59e0b"><i data-lucide="message-square"></i></span><span>Kafka в 2 проектах: at-least-once delivery, DLQ — устранена потеря сообщений, стабильность +50%</span></li>
-                <li><span class="ai" style="--c:#3fc58e"><i data-lucide="server"></i></span><span>Docker + Kubernetes + CI/CD (Maven/Gradle, GitHub Actions) — деплой: часы → 5–10 минут</span></li>
-                <li><span class="ai" style="--c:#f857a6"><i data-lucide="test-tube-2"></i></span><span>JUnit 5 + Mockito, покрытие 75–80% на REST API + Spring Security — регрессии исчезли</span></li>
-                <li><span class="ai" style="--c:#4facfe"><i data-lucide="zap"></i></span><span>Оптимизация legacy-алгоритма арбитражных связок (Java): 60–70 → <strong>400+ ops / 25–30 сек</strong>, MySQL/SQL</span></li>
-                <li><span class="ai" style="--c:#a78bfa"><i data-lucide="git-branch"></i></span><span>Самостоятельно вёл проекты от ТЗ до продакшена, координируя с бизнесом и frontend</span></li>
+                <li><span class="ai" style="--c:#6d5dfc"><i data-lucide="bot"></i></span><span data-key="j2_t1">Java + Spring Boot, 15+ Telegram/VK-ботов в Agile/Jira (интернет-магазины, CRM, арбитраж)</span></li>
+                <li><span class="ai" style="--c:#f59e0b"><i data-lucide="message-square"></i></span><span data-key="j2_t2">Kafka в 2 проектах: at-least-once delivery, DLQ — устранена потеря сообщений, стабильность +50%</span></li>
+                <li><span class="ai" style="--c:#3fc58e"><i data-lucide="server"></i></span><span data-key="j2_t3">Docker + Kubernetes + CI/CD (Maven/Gradle, GitHub Actions) — деплой: часы → 5–10 минут</span></li>
+                <li><span class="ai" style="--c:#f857a6"><i data-lucide="test-tube-2"></i></span><span data-key="j2_t4">JUnit 5 + Mockito, покрытие 75–80% на REST API + Spring Security — регрессии исчезли</span></li>
+                <li><span class="ai" style="--c:#4facfe"><i data-lucide="zap"></i></span><span data-key="j2_t5">Оптимизация legacy-алгоритма арбитражных связок (Java): 60–70 → <strong>400+ ops / 25–30 сек</strong>, MySQL/SQL</span></li>
+                <li><span class="ai" style="--c:#a78bfa"><i data-lucide="git-branch"></i></span><span data-key="j2_t6">Самостоятельно вёл проекты от ТЗ до продакшена, координируя с бизнесом и frontend</span></li>
               </ul>
 
               <div class="tech-stack">
@@ -320,19 +327,19 @@
             <div class="tl-card">
               <div class="tl-header">
                 <div>
-                  <span class="tl-period">Июн 2021 — н.в.</span>
-                  <h3 class="tl-role">Freelance Backend & Mobile Developer</h3>
+                  <span class="tl-period" data-key="j3_period">Июн 2021 — н.в.</span>
+                  <h3 class="tl-role" data-key="j3_role">Freelance Backend &amp; Mobile Developer</h3>
                   <div class="tl-company">
                     <i data-lucide="globe"></i>
                     <span>Fiverr / FL.ru</span>
                     <span class="badge badge--remote" data-key="remote">Удалённо</span>
                   </div>
                 </div>
-                <span class="tl-dur">4+ г.</span>
+                <span class="tl-dur" data-key="j3_dur">4+ г.</span>
               </div>
               <ul class="tl-achs">
-                <li><span class="ai" style="--c:#6d5dfc"><i data-lucide="code-2"></i></span><span>Разрабатывал REST API-сервисы, Android-приложения (Java) и Telegram-боты под индивидуальные заказы</span></li>
-                <li><span class="ai" style="--c:#4facfe"><i data-lucide="users"></i></span><span>Ведение клиентов: составление ТЗ, оценка сроков, сдача MVP в срок</span></li>
+                <li><span class="ai" style="--c:#6d5dfc"><i data-lucide="code-2"></i></span><span data-key="j3_a1">Разрабатывал REST API-сервисы, Android-приложения (Java) и Telegram-боты под индивидуальные заказы</span></li>
+                <li><span class="ai" style="--c:#4facfe"><i data-lucide="users"></i></span><span data-key="j3_a2">Ведение клиентов: составление ТЗ, оценка сроков, сдача MVP в срок</span></li>
               </ul>
               <div class="tech-stack">
                 <span class="tt">Java</span><span class="tt">Spring Boot</span><span class="tt">Android</span>
@@ -474,9 +481,25 @@
           <h2 class="section-title" data-key="proj_title">Проекты</h2>
         </div>
         <div class="proj-grid">
-          <div class="proj-card reveal" data-delay="0">
+          <a class="proj-card proj-card--featured reveal" data-delay="0" href="https://github.com/Ratila1/JGuardrails" target="_blank" rel="noopener">
             <div class="proj-top">
-              <div class="proj-icon" style="--c:#6d5dfc"><i data-lucide="moon"></i></div>
+              <div class="proj-icon" style="--c:#6d5dfc"><i data-lucide="shield"></i></div>
+              <div class="proj-badges">
+                <span class="badge badge--java">Java 17</span>
+                <span class="badge badge--backend">LLM Security</span>
+                <span class="badge badge--remote" data-key="open_source">Open Source</span>
+              </div>
+            </div>
+            <h3 class="proj-title">JGuardrails <span class="proj-star"><i data-lucide="star"></i>14</span></h3>
+            <p class="proj-desc" data-key="proj_jg_desc">Первая Java-библиотека guardrails для LLM: защита от prompt injection, маскирование PII, детекция токсичного контента. Spring AI / LangChain4j, мультиязычность (7 языков). Аналог NVIDIA NeMo Guardrails для Java-экосистемы.</p>
+            <div class="proj-foot">
+              <span class="proj-link"><i data-lucide="github"></i> GitHub</span>
+            </div>
+          </a>
+
+          <div class="proj-card reveal" data-delay="1">
+            <div class="proj-top">
+              <div class="proj-icon" style="--c:#a78bfa"><i data-lucide="moon"></i></div>
               <div class="proj-badges"><span class="badge badge--android">Android</span><span class="badge badge--java">Java</span></div>
             </div>
             <h3 class="proj-title">Noxi</h3>
@@ -484,7 +507,7 @@
             <div class="proj-foot"><span class="proj-status" data-key="in_dev">В разработке</span></div>
           </div>
 
-          <a class="proj-card reveal" data-delay="1" href="https://github.com/Ratila1/Findmate" target="_blank" rel="noopener">
+          <a class="proj-card reveal" data-delay="2" href="https://github.com/Ratila1/Findmate" target="_blank" rel="noopener">
             <div class="proj-top">
               <div class="proj-icon" style="--c:#4facfe"><i data-lucide="users"></i></div>
               <div class="proj-badges"><span class="badge badge--android">Android</span><span class="badge badge--backend">Backend</span></div>
@@ -496,7 +519,7 @@
             </div>
           </a>
 
-          <a class="proj-card reveal" data-delay="2" href="https://github.com/Ratila1/BankRest" target="_blank" rel="noopener">
+          <a class="proj-card reveal" data-delay="3" href="https://github.com/Ratila1/BankRest" target="_blank" rel="noopener">
             <div class="proj-top">
               <div class="proj-icon" style="--c:#3fc58e"><i data-lucide="landmark"></i></div>
               <div class="proj-badges"><span class="badge badge--backend">Backend</span><span class="badge badge--java">Java</span></div>
@@ -508,7 +531,7 @@
             </div>
           </a>
 
-          <a class="proj-card reveal" data-delay="3" href="https://github.com/Ratila1/deliveryService" target="_blank" rel="noopener">
+          <a class="proj-card reveal" data-delay="4" href="https://github.com/Ratila1/deliveryService" target="_blank" rel="noopener">
             <div class="proj-top">
               <div class="proj-icon" style="--c:#f857a6"><i data-lucide="bike"></i></div>
               <div class="proj-badges"><span class="badge badge--backend">Backend</span><span class="badge badge--java">Java</span><span class="badge badge--remote">Microservices</span></div>
@@ -520,7 +543,7 @@
             </div>
           </a>
 
-          <div class="proj-card reveal" data-delay="4">
+          <div class="proj-card reveal" data-delay="5">
             <div class="proj-top">
               <div class="proj-icon" style="--c:#f59e0b"><i data-lucide="gamepad-2"></i></div>
               <div class="proj-badges"><span class="badge badge--game">Game</span></div>
@@ -530,7 +553,7 @@
             <div class="proj-foot"><span class="proj-status proj-status--award" data-key="award">🥈 2-е место</span></div>
           </div>
 
-          <div class="proj-card reveal" data-delay="5">
+          <div class="proj-card reveal" data-delay="6">
             <div class="proj-top">
               <div class="proj-icon" style="--c:#e67e22"><i data-lucide="cpu"></i></div>
               <div class="proj-badges"><span class="badge badge--hw">Hardware</span></div>
@@ -538,6 +561,131 @@
             <h3 class="proj-title" data-key="proj5_title">Генератор сигналов</h3>
             <p class="proj-desc" data-key="proj5_desc">Аппаратный генератор + десктопное приложение. Синус, треугольник, меандр. 1-е место на национальном конкурсе.</p>
             <div class="proj-foot"><span class="proj-status proj-status--award" data-key="award1">🥇 1-е место</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PUBLICATIONS (HABR) ═══ -->
+    <section class="section section--alt" id="publications">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag" data-key="pub_tag">Публикации</span>
+          <h2 class="section-title" data-key="pub_title">Технические статьи</h2>
+          <p class="section-subtitle reveal" data-key="pub_subtitle">Пишу на Habr (RU) и dev.to (EN): безопасность LLM, guardrails, Java-архитектура. Суммарно 13 000+ просмотров.</p>
+        </div>
+
+        <!-- Habr platform block -->
+        <div class="pub-platform reveal">
+          <div class="pub-platform__head">
+            <span class="pub-platform__logo pub-platform__logo--habr">H</span>
+            <div class="pub-platform__info">
+              <h3 class="pub-platform__name">Habr</h3>
+              <span class="pub-platform__sub" data-key="pub_habr_sub">Русскоязычная аудитория · 13 000+ просмотров</span>
+            </div>
+            <a class="pub-platform__all" href="https://habr.com/ru/users/Ratila/articles/" target="_blank" rel="noopener">
+              <span data-key="pub_all_habr">Все статьи</span>
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+
+          <div class="habr-grid">
+            <a class="habr-card reveal" data-delay="0" href="https://habr.com/ru/articles/1023782/" target="_blank" rel="noopener">
+              <div class="habr-card__head">
+                <span class="habr-card__logo"><i data-lucide="book-open"></i></span>
+                <span class="habr-card__date" data-key="pub1_date">15 апр 2026 · 14 мин</span>
+              </div>
+              <h3 class="habr-card__title" data-key="pub1_title">Guardrails для LLM на Java: как приручить промпт-инъекции и токсичные ответы</h3>
+              <p class="habr-card__desc" data-key="pub1_desc">«System prompt — это инструкция, которую LLM старается выполнить, но не обязан». Разбор защит на уровне кода: PII-маскирование, детекция jailbreak, fail-closed политика.</p>
+              <div class="habr-card__tags">
+                <span class="habr-tag">Java</span>
+                <span class="habr-tag">LangChain4J</span>
+                <span class="habr-tag">Spring AI</span>
+                <span class="habr-tag">LLM Security</span>
+              </div>
+              <div class="habr-card__stats">
+                <span class="habr-stat"><i data-lucide="eye"></i>8 148</span>
+                <span class="habr-stat"><i data-lucide="bookmark"></i>11</span>
+                <span class="habr-stat"><i data-lucide="message-circle"></i>4</span>
+                <span class="habr-card__link"><i data-lucide="arrow-up-right"></i></span>
+              </div>
+            </a>
+
+            <a class="habr-card reveal" data-delay="1" href="https://habr.com/ru/articles/1024028/" target="_blank" rel="noopener">
+              <div class="habr-card__head">
+                <span class="habr-card__logo"><i data-lucide="shield"></i></span>
+                <span class="habr-card__date" data-key="pub2_date">16 апр 2026 · 13 мин</span>
+              </div>
+              <h3 class="habr-card__title" data-key="pub2_title">Токсичный контент, промпт-хакинг и защита ИИ — всё о Guardrails для LLM</h3>
+              <p class="habr-card__desc" data-key="pub2_desc">Обзор уязвимостей языковых моделей и технологий защиты: prompt injection, jailbreak, data exfiltration. Практические подходы и архитектурные паттерны.</p>
+              <div class="habr-card__tags">
+                <span class="habr-tag">AI Security</span>
+                <span class="habr-tag">LLM</span>
+                <span class="habr-tag">Java</span>
+                <span class="habr-tag">Machine Learning</span>
+              </div>
+              <div class="habr-card__stats">
+                <span class="habr-stat"><i data-lucide="eye"></i>5 682</span>
+                <span class="habr-stat"><i data-lucide="bookmark"></i>14</span>
+                <span class="habr-stat"><i data-lucide="message-circle"></i>2</span>
+                <span class="habr-card__link"><i data-lucide="arrow-up-right"></i></span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- dev.to platform block -->
+        <div class="pub-platform pub-platform--devto reveal">
+          <div class="pub-platform__head">
+            <span class="pub-platform__logo pub-platform__logo--devto">&lt;/&gt;</span>
+            <div class="pub-platform__info">
+              <h3 class="pub-platform__name">DEV Community</h3>
+              <span class="pub-platform__sub" data-key="pub_devto_sub">Международная аудитория · English</span>
+            </div>
+            <a class="pub-platform__all" href="https://dev.to/ratila" target="_blank" rel="noopener">
+              <span data-key="pub_all_devto">Все статьи</span>
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+
+          <div class="habr-grid">
+            <a class="habr-card habr-card--devto reveal" data-delay="0" href="https://dev.to/ratila/jguardrails-production-ready-safety-rails-for-java-llm-applications-2aee" target="_blank" rel="noopener">
+              <div class="habr-card__head">
+                <span class="habr-card__logo"><i data-lucide="shield-check"></i></span>
+                <span class="habr-card__date" data-key="pub3_date">11 апр 2026 · EN</span>
+              </div>
+              <h3 class="habr-card__title" data-key="pub3_title">JGuardrails: Production-Ready Safety Rails for Java LLM Applications</h3>
+              <p class="habr-card__desc" data-key="pub3_desc">Java-библиотека, которая оборачивает вызовы LLM pipeline-ом для контроля безопасности: детекция prompt injection, утечек PII, токсичности, невалидного JSON. Защита как код, а не только system prompt.</p>
+              <div class="habr-card__tags">
+                <span class="habr-tag">#ai</span>
+                <span class="habr-tag">#java</span>
+                <span class="habr-tag">#llm</span>
+                <span class="habr-tag">#programming</span>
+              </div>
+              <div class="habr-card__stats">
+                <span class="habr-stat"><i data-lucide="tag"></i>Launch</span>
+                <span class="habr-card__link"><i data-lucide="arrow-up-right"></i></span>
+              </div>
+            </a>
+
+            <a class="habr-card habr-card--devto reveal" data-delay="1" href="https://dev.to/ratila/jguardrails-100-hardening-java-llm-apps-against-jailbreaks-toxicity-and-prompt-injection-4d0a" target="_blank" rel="noopener">
+              <div class="habr-card__head">
+                <span class="habr-card__logo"><i data-lucide="lock"></i></span>
+                <span class="habr-card__date" data-key="pub4_date">16 апр 2026 · EN</span>
+              </div>
+              <h3 class="habr-card__title" data-key="pub4_title">JGuardrails 1.0.0 — Hardening Java LLM Apps Against Jailbreaks, Toxicity, and Prompt Injection</h3>
+              <p class="habr-card__desc" data-key="pub4_desc">Релиз 1.0.0: производительность через Aho-Corasick, поддержка японского языка, расширяемая архитектура паттернов. Защита против prompt injection, jailbreak и токсичного вывода.</p>
+              <div class="habr-card__tags">
+                <span class="habr-tag">#java</span>
+                <span class="habr-tag">#llm</span>
+                <span class="habr-tag">#security</span>
+                <span class="habr-tag">#opensource</span>
+              </div>
+              <div class="habr-card__stats">
+                <span class="habr-stat"><i data-lucide="tag"></i>v1.0.0</span>
+                <span class="habr-card__link"><i data-lucide="arrow-up-right"></i></span>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -552,7 +700,7 @@
         </div>
         <div class="goals-tl">
           <div class="goal-item reveal" data-delay="0">
-            <div class="goal-year">2026–2030</div>
+            <div class="goal-year" data-key="goal1_year">2026–2030</div>
             <div class="goal-connector"><div class="goal-node"><i data-lucide="graduation-cap"></i></div></div>
             <div class="goal-card">
               <h4 data-key="goal1_title">Бакалавр по Software Engineering</h4>
@@ -560,7 +708,7 @@
             </div>
           </div>
           <div class="goal-item reveal" data-delay="1">
-            <div class="goal-year">2030–2032</div>
+            <div class="goal-year" data-key="goal2_year">2030–2032</div>
             <div class="goal-connector"><div class="goal-node" style="--nc:#4facfe"><i data-lucide="brain"></i></div></div>
             <div class="goal-card">
               <h4 data-key="goal2_title">Магистратура по AI/ML</h4>
@@ -568,7 +716,7 @@
             </div>
           </div>
           <div class="goal-item reveal" data-delay="2">
-            <div class="goal-year">до 2030</div>
+            <div class="goal-year" data-key="goal3_year">до 2030</div>
             <div class="goal-connector"><div class="goal-node" style="--nc:#3fc58e"><i data-lucide="trending-up"></i></div></div>
             <div class="goal-card">
               <h4 data-key="goal3_title">Senior Java / Backend Engineer</h4>
@@ -576,7 +724,7 @@
             </div>
           </div>
           <div class="goal-item reveal" data-delay="3">
-            <div class="goal-year">Долгосрочно</div>
+            <div class="goal-year" data-key="goal4_year">Долгосрочно</div>
             <div class="goal-connector"><div class="goal-node" style="--nc:#f59e0b"><i data-lucide="rocket"></i></div></div>
             <div class="goal-card">
               <h4 data-key="goal4_title">Собственный стартап</h4>

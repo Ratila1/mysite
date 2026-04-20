@@ -76,6 +76,66 @@ const T = {
     form_message:'Сообщение', form_send:'Отправить сообщение',
     form_success:'✓ Сообщение отправлено! Отвечу в ближайшее время.',
     form_error:'✗ Ошибка при отправке. Попробуйте позже или напишите напрямую.',
+    // ── New: Publications (Habr + dev.to)
+    nav_pub:'Статьи',
+    pub_tag:'Публикации', pub_title:'Технические статьи',
+    pub_subtitle:'Пишу на Habr (RU) и dev.to (EN): безопасность LLM, guardrails, Java-архитектура. Суммарно 13 000+ просмотров.',
+    pub_habr_sub:'Русскоязычная аудитория · 13 000+ просмотров',
+    pub_devto_sub:'Международная аудитория · English',
+    pub_all_habr:'Все статьи', pub_all_devto:'Все статьи',
+    pub1_date:'15 апр 2026 · 14 мин',
+    pub1_title:'Guardrails для LLM на Java: как приручить промпт-инъекции и токсичные ответы',
+    pub1_desc:'«System prompt — это инструкция, которую LLM старается выполнить, но не обязан». Разбор защит на уровне кода: PII-маскирование, детекция jailbreak, fail-closed политика.',
+    pub2_date:'16 апр 2026 · 13 мин',
+    pub2_title:'Токсичный контент, промпт-хакинг и защита ИИ — всё о Guardrails для LLM',
+    pub2_desc:'Обзор уязвимостей языковых моделей и технологий защиты: prompt injection, jailbreak, data exfiltration. Практические подходы и архитектурные паттерны.',
+    pub3_date:'11 апр 2026 · EN',
+    pub3_title:'JGuardrails: Production-Ready Safety Rails for Java LLM Applications',
+    pub3_desc:'Java-библиотека, которая оборачивает вызовы LLM pipeline-ом для контроля безопасности: детекция prompt injection, утечек PII, токсичности, невалидного JSON. Защита как код, а не только system prompt.',
+    pub4_date:'16 апр 2026 · EN',
+    pub4_title:'JGuardrails 1.0.0 — Hardening Java LLM Apps Against Jailbreaks, Toxicity, and Prompt Injection',
+    pub4_desc:'Релиз 1.0.0: производительность через Aho-Corasick, поддержка японского языка, расширяемая архитектура паттернов. Защита против prompt injection, jailbreak и токсичного вывода.',
+    // ── New: JGuardrails project
+    open_source:'Open Source',
+    proj_jg_desc:'Первая Java-библиотека guardrails для LLM: защита от prompt injection, маскирование PII, детекция токсичного контента. Spring AI / LangChain4j, мультиязычность (7 языков). Аналог NVIDIA NeMo Guardrails для Java-экосистемы.',
+    // ── New: Timeline two-tier (Job 1 BuildersApp)
+    sep_results:'Результаты', sep_tech:'Для тех. специалиста',
+    j1_period:'Апр 2025 — Окт 2025', j1_role:'Backend Developer', j1_dur:'7 мес.',
+    j1_team:'Команда 5–6 человек · поддержка существующих проектов + разработка нового сервиса',
+    j1_hr1:'Создал бота с нуля — <strong>19 000+ пользователей</strong> за 6 месяцев, retention +25%',
+    j1_hr2:'Реализовал платёжную систему с эскроу — безопасные транзакции для тысяч пользователей',
+    j1_hr3:'Ускорил обработку заявок — <strong>в 3–4 раза</strong> при пиковых нагрузках',
+    j1_hr4:'Снизил нагрузку на базу данных — <strong>на 30–40%</strong> при 5× росте аудитории, без downtime',
+    j1_hr5:'Тестовое покрытие платёжных сценариев — <strong>80%+</strong>, регрессии устранены',
+    j1_hr6:'Реализовал экраны оплаты и push-уведомления в мобильном приложении',
+    j1_t1:'Python + aiogram 3 + asyncio, интеграция со Spring Boot бэкендом — Telegram-бот с нуля',
+    j1_t2:'Escrow-логика и интеграция Stripe в микросервисной архитектуре — безопасные транзакции',
+    j1_t3:'Асинхронная архитектура + Redis cache-aside + PostgreSQL — 3–4× быстрее при пиковой нагрузке',
+    j1_t4:'Оптимизация тяжёлых SQL через Hibernate — −30–40% нагрузки на БД при росте пользователей',
+    j1_t5:'pytest + JUnit 5 + Mockito на платёжные сценарии — покрытие 80%+, регрессии устранены',
+    j1_t6:'Нативный Android-модуль (Java) + Flutter в CI/CD пайплайне: экраны оплаты, push-уведомления',
+    // ── Job 2 БелБот
+    j2_period:'Янв 2022 — Июл 2025', j2_role:'Backend Developer',
+    j2_outsource:'Аутсорс · Беларусь', j2_dur:'3.5 г.',
+    j2_team:'Команда 3 человека (frontend, тимлид, я — backend) · Agile / Jira · аутсорс',
+    j2_hr1:'Разработал <strong>15+ коммерческих продуктов</strong> — от ТЗ до релиза, всё в срок',
+    j2_hr2:'Устранил потерю сообщений при пиковых нагрузках — стабильность <strong>+50%</strong>',
+    j2_hr3:'Сократил время выката обновлений — <strong>с нескольких часов до 5–10 минут</strong>',
+    j2_hr4:'Поднял тестовое покрытие до <strong>75–80%</strong> — регрессии практически исчезли',
+    j2_hr5:'Ускорил ключевой алгоритм в <strong>6×</strong> — с 70 до 400+ операций за 30 секунд',
+    j2_hr6:'Вёл проекты от ТЗ до продакшена — координировал с бизнесом и frontend без задержек',
+    j2_t1:'Java + Spring Boot, 15+ Telegram/VK-ботов в Agile/Jira (интернет-магазины, CRM, арбитраж)',
+    j2_t2:'Kafka в 2 проектах: at-least-once delivery, DLQ — устранена потеря сообщений, стабильность +50%',
+    j2_t3:'Docker + Kubernetes + CI/CD (Maven/Gradle, GitHub Actions) — деплой: часы → 5–10 минут',
+    j2_t4:'JUnit 5 + Mockito, покрытие 75–80% на REST API + Spring Security — регрессии исчезли',
+    j2_t5:'Оптимизация legacy-алгоритма арбитражных связок (Java): 60–70 → <strong>400+ ops / 25–30 сек</strong>, MySQL/SQL',
+    j2_t6:'Самостоятельно вёл проекты от ТЗ до продакшена, координируя с бизнесом и frontend',
+    // ── Job 3 Freelance
+    j3_period:'Июн 2021 — н.в.', j3_role:'Freelance Backend & Mobile Developer', j3_dur:'4+ г.',
+    j3_a1:'Разрабатывал REST API-сервисы, Android-приложения (Java) и Telegram-боты под индивидуальные заказы',
+    j3_a2:'Ведение клиентов: составление ТЗ, оценка сроков, сдача MVP в срок',
+    // ── Goal years
+    goal1_year:'2026–2030', goal2_year:'2030–2032', goal3_year:'до 2030', goal4_year:'Долгосрочно',
   },
 
   en: {
@@ -150,6 +210,66 @@ const T = {
     form_message:'Message', form_send:'Send Message',
     form_success:'✓ Message sent! I\'ll get back to you soon.',
     form_error:'✗ Failed to send. Please try again or write directly.',
+    // ── New: Publications (Habr + dev.to)
+    nav_pub:'Articles',
+    pub_tag:'Publications', pub_title:'Technical Articles',
+    pub_subtitle:'I write on Habr (RU) and dev.to (EN): LLM security, guardrails, Java architecture. 13,000+ total views.',
+    pub_habr_sub:'Russian-speaking audience · 13,000+ views',
+    pub_devto_sub:'International audience · English',
+    pub_all_habr:'All articles', pub_all_devto:'All articles',
+    pub1_date:'Apr 15, 2026 · 14 min',
+    pub1_title:'Guardrails for LLMs in Java: Taming Prompt Injections and Toxic Responses',
+    pub1_desc:'"System prompt is an instruction the LLM tries to follow, but isn\'t required to." Code-level defenses: PII masking, jailbreak detection, fail-closed policy.',
+    pub2_date:'Apr 16, 2026 · 13 min',
+    pub2_title:'Toxic Content, Prompt Hacking and AI Protection — All About Guardrails for LLMs',
+    pub2_desc:'Overview of LLM vulnerabilities and protection technologies: prompt injection, jailbreak, data exfiltration. Practical approaches and architectural patterns.',
+    pub3_date:'Apr 11, 2026 · EN',
+    pub3_title:'JGuardrails: Production-Ready Safety Rails for Java LLM Applications',
+    pub3_desc:'A Java library that wraps LLM client calls with an input/output pipeline to enforce safety constraints: prompt injection detection, PII leakage, toxic outputs, invalid JSON. Safety as code, not just a system prompt.',
+    pub4_date:'Apr 16, 2026 · EN',
+    pub4_title:'JGuardrails 1.0.0 — Hardening Java LLM Apps Against Jailbreaks, Toxicity, and Prompt Injection',
+    pub4_desc:'1.0.0 release: performance via Aho-Corasick keyword matching, Japanese language support, extensible pattern architecture. Protection against prompt injection, jailbreaks, and toxic output.',
+    // ── New: JGuardrails project
+    open_source:'Open Source',
+    proj_jg_desc:'First Java guardrails library for LLMs: prompt injection protection, PII masking, toxic content detection. Spring AI / LangChain4j, multilingual (7 languages). Java-ecosystem alternative to NVIDIA NeMo Guardrails.',
+    // ── New: Timeline two-tier (Job 1 BuildersApp)
+    sep_results:'Results', sep_tech:'For tech specialists',
+    j1_period:'Apr 2025 — Oct 2025', j1_role:'Backend Developer', j1_dur:'7 mo.',
+    j1_team:'Team of 5–6 · maintaining existing projects + new service development',
+    j1_hr1:'Built a bot from scratch — <strong>19,000+ users</strong> in 6 months, retention +25%',
+    j1_hr2:'Implemented escrow payment system — secure transactions for thousands of users',
+    j1_hr3:'Accelerated request processing — <strong>3–4× faster</strong> during peak loads',
+    j1_hr4:'Reduced database load — <strong>by 30–40%</strong> during 5× audience growth, zero downtime',
+    j1_hr5:'Test coverage for payment scenarios — <strong>80%+</strong>, regressions eliminated',
+    j1_hr6:'Implemented payment screens and push notifications in the mobile app',
+    j1_t1:'Python + aiogram 3 + asyncio, integration with Spring Boot backend — Telegram bot from scratch',
+    j1_t2:'Escrow logic and Stripe integration in microservice architecture — secure transactions',
+    j1_t3:'Async architecture + Redis cache-aside + PostgreSQL — 3–4× faster at peak load',
+    j1_t4:'Heavy SQL optimization via Hibernate — −30–40% DB load during user growth',
+    j1_t5:'pytest + JUnit 5 + Mockito on payment scenarios — 80%+ coverage, regressions eliminated',
+    j1_t6:'Native Android module (Java) + Flutter in CI/CD pipeline: payment screens, push notifications',
+    // ── Job 2 BelBot
+    j2_period:'Jan 2022 — Jul 2025', j2_role:'Backend Developer',
+    j2_outsource:'Outsource · Belarus', j2_dur:'3.5 yrs',
+    j2_team:'Team of 3 (frontend, tech lead, me — backend) · Agile / Jira · outsource',
+    j2_hr1:'Delivered <strong>15+ commercial products</strong> — from spec to release, all on time',
+    j2_hr2:'Eliminated message loss under peak loads — stability <strong>+50%</strong>',
+    j2_hr3:'Reduced deployment time — <strong>from hours to 5–10 minutes</strong>',
+    j2_hr4:'Raised test coverage to <strong>75–80%</strong> — regressions virtually disappeared',
+    j2_hr5:'Accelerated key algorithm <strong>6×</strong> — from 70 to 400+ operations in 30 seconds',
+    j2_hr6:'Led projects from spec to production — coordinated with business and frontend seamlessly',
+    j2_t1:'Java + Spring Boot, 15+ Telegram/VK bots in Agile/Jira (online shops, CRM, arbitrage)',
+    j2_t2:'Kafka in 2 projects: at-least-once delivery, DLQ — eliminated message loss, stability +50%',
+    j2_t3:'Docker + Kubernetes + CI/CD (Maven/Gradle, GitHub Actions) — deploy: hours → 5–10 min',
+    j2_t4:'JUnit 5 + Mockito, 75–80% coverage on REST API + Spring Security — regressions eliminated',
+    j2_t5:'Legacy arbitrage algorithm optimization (Java): 60–70 → <strong>400+ ops / 25–30 sec</strong>, MySQL/SQL',
+    j2_t6:'Independently led projects from spec to production, coordinating with business and frontend',
+    // ── Job 3 Freelance
+    j3_period:'Jun 2021 — Present', j3_role:'Freelance Backend & Mobile Developer', j3_dur:'4+ yrs',
+    j3_a1:'Developed REST API services, Android apps (Java) and Telegram bots for custom orders',
+    j3_a2:'Client management: writing specs, estimating timelines, delivering MVPs on time',
+    // ── Goal years
+    goal1_year:'2026–2030', goal2_year:'2030–2032', goal3_year:'by 2030', goal4_year:'Long-term',
   },
 
   es: {
@@ -224,6 +344,66 @@ const T = {
     form_message:'Mensaje', form_send:'Enviar Mensaje',
     form_success:'✓ ¡Mensaje enviado! Te responderé pronto.',
     form_error:'✗ Error al enviar. Inténtalo de nuevo o escribe directamente.',
+    // ── New: Publications (Habr + dev.to)
+    nav_pub:'Artículos',
+    pub_tag:'Publicaciones', pub_title:'Artículos Técnicos',
+    pub_subtitle:'Escribo en Habr (RU) y dev.to (EN): seguridad LLM, guardrails, arquitectura Java. Más de 13.000 visualizaciones en total.',
+    pub_habr_sub:'Audiencia rusoparlante · 13.000+ visualizaciones',
+    pub_devto_sub:'Audiencia internacional · Inglés',
+    pub_all_habr:'Todos los artículos', pub_all_devto:'Todos los artículos',
+    pub1_date:'15 abr 2026 · 14 min',
+    pub1_title:'Guardrails para LLM en Java: cómo domar inyecciones de prompt y respuestas tóxicas',
+    pub1_desc:'«El system prompt es una instrucción que el LLM intenta cumplir, pero no está obligado». Defensas a nivel de código: enmascaramiento PII, detección de jailbreak, política fail-closed.',
+    pub2_date:'16 abr 2026 · 13 min',
+    pub2_title:'Contenido tóxico, prompt hacking y protección de IA — todo sobre Guardrails para LLM',
+    pub2_desc:'Visión general de vulnerabilidades de modelos de lenguaje y tecnologías de protección: prompt injection, jailbreak, exfiltración de datos. Enfoques prácticos y patrones arquitectónicos.',
+    pub3_date:'11 abr 2026 · EN',
+    pub3_title:'JGuardrails: Production-Ready Safety Rails for Java LLM Applications',
+    pub3_desc:'Biblioteca Java que envuelve las llamadas a LLM con un pipeline de entrada/salida para aplicar restricciones de seguridad: detección de prompt injection, fugas de PII, salidas tóxicas, JSON inválido. Seguridad como código, no solo un system prompt.',
+    pub4_date:'16 abr 2026 · EN',
+    pub4_title:'JGuardrails 1.0.0 — Hardening Java LLM Apps Against Jailbreaks, Toxicity, and Prompt Injection',
+    pub4_desc:'Lanzamiento 1.0.0: rendimiento con Aho-Corasick, soporte para japonés, arquitectura extensible de patrones. Protección contra prompt injection, jailbreaks y salidas tóxicas.',
+    // ── New: JGuardrails project
+    open_source:'Open Source',
+    proj_jg_desc:'Primera biblioteca Java de guardrails para LLM: protección contra prompt injection, enmascaramiento PII, detección de contenido tóxico. Spring AI / LangChain4j, multilingüe (7 idiomas). Alternativa en Java a NVIDIA NeMo Guardrails.',
+    // ── New: Timeline two-tier (Job 1 BuildersApp)
+    sep_results:'Resultados', sep_tech:'Para especialistas técnicos',
+    j1_period:'Abr 2025 — Oct 2025', j1_role:'Backend Developer', j1_dur:'7 meses',
+    j1_team:'Equipo de 5–6 personas · mantenimiento de proyectos existentes + desarrollo de nuevo servicio',
+    j1_hr1:'Creé un bot desde cero — <strong>19.000+ usuarios</strong> en 6 meses, retención +25%',
+    j1_hr2:'Implementé sistema de pagos escrow — transacciones seguras para miles de usuarios',
+    j1_hr3:'Aceleré el procesamiento de solicitudes — <strong>3–4× más rápido</strong> en cargas máximas',
+    j1_hr4:'Reduje la carga de la base de datos — <strong>en 30–40%</strong> con 5× de crecimiento, sin downtime',
+    j1_hr5:'Cobertura de tests de pagos — <strong>80%+</strong>, regresiones eliminadas',
+    j1_hr6:'Implementé pantallas de pago y notificaciones push en la app móvil',
+    j1_t1:'Python + aiogram 3 + asyncio, integración con backend Spring Boot — bot de Telegram desde cero',
+    j1_t2:'Lógica escrow e integración Stripe en arquitectura de microservicios — transacciones seguras',
+    j1_t3:'Arquitectura async + Redis cache-aside + PostgreSQL — 3–4× más rápido en carga máxima',
+    j1_t4:'Optimización de SQL pesado con Hibernate — −30–40% de carga de BD durante crecimiento',
+    j1_t5:'pytest + JUnit 5 + Mockito en escenarios de pago — 80%+ cobertura, regresiones eliminadas',
+    j1_t6:'Módulo Android nativo (Java) + Flutter en pipeline CI/CD: pantallas de pago, notificaciones push',
+    // ── Job 2 BelBot
+    j2_period:'Ene 2022 — Jul 2025', j2_role:'Backend Developer',
+    j2_outsource:'Outsourcing · Bielorrusia', j2_dur:'3.5 años',
+    j2_team:'Equipo de 3 (frontend, tech lead, yo — backend) · Agile / Jira · outsourcing',
+    j2_hr1:'Desarrollé <strong>15+ productos comerciales</strong> — desde la especificación hasta el release, todo a tiempo',
+    j2_hr2:'Eliminé la pérdida de mensajes en cargas máximas — estabilidad <strong>+50%</strong>',
+    j2_hr3:'Reduje el tiempo de despliegue — <strong>de horas a 5–10 minutos</strong>',
+    j2_hr4:'Aumenté la cobertura de tests a <strong>75–80%</strong> — las regresiones prácticamente desaparecieron',
+    j2_hr5:'Aceleré un algoritmo clave <strong>6×</strong> — de 70 a 400+ operaciones en 30 segundos',
+    j2_hr6:'Lideré proyectos desde la especificación hasta producción — coordinación con negocio y frontend sin retrasos',
+    j2_t1:'Java + Spring Boot, 15+ bots Telegram/VK en Agile/Jira (tiendas online, CRM, arbitraje)',
+    j2_t2:'Kafka en 2 proyectos: at-least-once delivery, DLQ — pérdida de mensajes eliminada, estabilidad +50%',
+    j2_t3:'Docker + Kubernetes + CI/CD (Maven/Gradle, GitHub Actions) — despliegue: horas → 5–10 min',
+    j2_t4:'JUnit 5 + Mockito, 75–80% cobertura en REST API + Spring Security — regresiones eliminadas',
+    j2_t5:'Optimización de algoritmo legacy de arbitraje (Java): 60–70 → <strong>400+ ops / 25–30 seg</strong>, MySQL/SQL',
+    j2_t6:'Lideré proyectos de forma autónoma desde la especificación hasta producción, coordinando con negocio y frontend',
+    // ── Job 3 Freelance
+    j3_period:'Jun 2021 — actualidad', j3_role:'Desarrollador Backend & Mobile Freelance', j3_dur:'4+ años',
+    j3_a1:'Desarrollé servicios REST API, apps Android (Java) y bots de Telegram para pedidos personalizados',
+    j3_a2:'Gestión de clientes: redacción de especificaciones, estimación de plazos, entrega de MVPs a tiempo',
+    // ── Goal years
+    goal1_year:'2026–2030', goal2_year:'2030–2032', goal3_year:'hasta 2030', goal4_year:'Largo plazo',
   },
 
   de: {
@@ -274,6 +454,7 @@ const T = {
     proj1_desc:'App zum Sprachenlernen im Schlaf. ~20k Codezeilen. Schlafphasen, TTS/SSML, Fortschrittsverfolgung.',
     proj2_desc:'App zur Suche nach Personen und Teams. Finalist nationaler Wettbewerbe. Android + Java Backend.',
     proj_bank_desc:'REST API eines Banksystems. Spring Boot, PostgreSQL, JWT-Authentifizierung, Benutzerrollen.',
+    proj_delivered_desc:'Pet-Projekt: Microservice-Klon von Yandex Food. Spring Boot, Kafka, PostgreSQL, Docker — vollständige Simulation einer Food-Delivery-Plattform.',
     proj3_title:'Hochlast-Telegram-Bots',
     proj3_desc:'15+ kommerzielle Bots, Millionen von Nachrichten, Stripe-Integration, 19.000+ aktive Nutzer.',
     proj4_title:'2.5D-Plattformer', proj4_desc:'Unreal Engine 5-Spiel mit eigener Physik. 2. Platz bei Patriot.by.',
@@ -297,6 +478,66 @@ const T = {
     form_message:'Nachricht', form_send:'Nachricht senden',
     form_success:'✓ Nachricht gesendet! Ich melde mich bald.',
     form_error:'✗ Sendefehler. Bitte erneut versuchen oder direkt schreiben.',
+    // ── New: Publications (Habr + dev.to)
+    nav_pub:'Artikel',
+    pub_tag:'Publikationen', pub_title:'Technische Artikel',
+    pub_subtitle:'Ich schreibe auf Habr (RU) und dev.to (EN): LLM-Sicherheit, Guardrails, Java-Architektur. Insgesamt 13.000+ Aufrufe.',
+    pub_habr_sub:'Russischsprachiges Publikum · 13.000+ Aufrufe',
+    pub_devto_sub:'Internationales Publikum · Englisch',
+    pub_all_habr:'Alle Artikel', pub_all_devto:'Alle Artikel',
+    pub1_date:'15. Apr 2026 · 14 Min',
+    pub1_title:'Guardrails für LLMs in Java: Prompt-Injections und toxische Antworten zähmen',
+    pub1_desc:'„Der System-Prompt ist eine Anweisung, die das LLM zu befolgen versucht, aber nicht befolgen muss." Code-Level-Schutz: PII-Maskierung, Jailbreak-Erkennung, Fail-Closed-Policy.',
+    pub2_date:'16. Apr 2026 · 13 Min',
+    pub2_title:'Toxische Inhalte, Prompt-Hacking und KI-Schutz — alles über Guardrails für LLMs',
+    pub2_desc:'Überblick über Schwachstellen von Sprachmodellen und Schutztechnologien: Prompt Injection, Jailbreak, Data Exfiltration. Praktische Ansätze und Architekturmuster.',
+    pub3_date:'11. Apr 2026 · EN',
+    pub3_title:'JGuardrails: Production-Ready Safety Rails for Java LLM Applications',
+    pub3_desc:'Java-Bibliothek, die LLM-Aufrufe mit einer Input/Output-Pipeline umhüllt, um Sicherheitsbeschränkungen durchzusetzen: Erkennung von Prompt Injection, PII-Lecks, toxischen Ausgaben, ungültigem JSON. Sicherheit als Code, nicht nur als System-Prompt.',
+    pub4_date:'16. Apr 2026 · EN',
+    pub4_title:'JGuardrails 1.0.0 — Hardening Java LLM Apps Against Jailbreaks, Toxicity, and Prompt Injection',
+    pub4_desc:'Release 1.0.0: Performance durch Aho-Corasick, Japanisch-Unterstützung, erweiterbare Pattern-Architektur. Schutz vor Prompt Injection, Jailbreaks und toxischen Ausgaben.',
+    // ── New: JGuardrails project
+    open_source:'Open Source',
+    proj_jg_desc:'Erste Java-Guardrails-Bibliothek für LLMs: Schutz vor Prompt Injection, PII-Maskierung, Erkennung toxischer Inhalte. Spring AI / LangChain4j, mehrsprachig (7 Sprachen). Java-Alternative zu NVIDIA NeMo Guardrails.',
+    // ── New: Timeline two-tier (Job 1 BuildersApp)
+    sep_results:'Ergebnisse', sep_tech:'Für technische Spezialisten',
+    j1_period:'Apr 2025 — Okt 2025', j1_role:'Backend Developer', j1_dur:'7 Mon.',
+    j1_team:'Team von 5–6 Personen · Pflege bestehender Projekte + Entwicklung eines neuen Services',
+    j1_hr1:'Bot von Grund auf entwickelt — <strong>19.000+ Nutzer</strong> in 6 Monaten, Retention +25%',
+    j1_hr2:'Escrow-Zahlungssystem implementiert — sichere Transaktionen für Tausende von Nutzern',
+    j1_hr3:'Anfrageverarbeitung beschleunigt — <strong>3–4× schneller</strong> bei Spitzenlast',
+    j1_hr4:'Datenbanklast reduziert — <strong>um 30–40%</strong> bei 5× Wachstum, ohne Downtime',
+    j1_hr5:'Testabdeckung der Zahlungsszenarien — <strong>80%+</strong>, Regressionen beseitigt',
+    j1_hr6:'Zahlungsbildschirme und Push-Benachrichtigungen in der Mobile-App implementiert',
+    j1_t1:'Python + aiogram 3 + asyncio, Integration mit Spring Boot Backend — Telegram-Bot von Grund auf',
+    j1_t2:'Escrow-Logik und Stripe-Integration in Microservice-Architektur — sichere Transaktionen',
+    j1_t3:'Async-Architektur + Redis Cache-Aside + PostgreSQL — 3–4× schneller bei Spitzenlast',
+    j1_t4:'Optimierung schwerer SQL via Hibernate — −30–40% DB-Last bei Nutzerwachstum',
+    j1_t5:'pytest + JUnit 5 + Mockito auf Zahlungsszenarien — 80%+ Abdeckung, Regressionen beseitigt',
+    j1_t6:'Natives Android-Modul (Java) + Flutter in CI/CD-Pipeline: Zahlungsbildschirme, Push-Benachrichtigungen',
+    // ── Job 2 BelBot
+    j2_period:'Jan 2022 — Jul 2025', j2_role:'Backend Developer',
+    j2_outsource:'Outsourcing · Belarus', j2_dur:'3,5 J.',
+    j2_team:'Team von 3 (Frontend, Tech Lead, ich — Backend) · Agile / Jira · Outsourcing',
+    j2_hr1:'<strong>15+ kommerzielle Produkte</strong> entwickelt — vom Lastenheft bis zum Release, alles pünktlich',
+    j2_hr2:'Nachrichtenverlust bei Spitzenlast eliminiert — Stabilität <strong>+50%</strong>',
+    j2_hr3:'Deployment-Zeit reduziert — <strong>von Stunden auf 5–10 Minuten</strong>',
+    j2_hr4:'Testabdeckung auf <strong>75–80%</strong> erhöht — Regressionen praktisch verschwunden',
+    j2_hr5:'Schlüsselalgorithmus <strong>6×</strong> beschleunigt — von 70 auf 400+ Operationen in 30 Sekunden',
+    j2_hr6:'Projekte vom Lastenheft bis zur Produktion geleitet — Koordination mit Business und Frontend ohne Verzögerungen',
+    j2_t1:'Java + Spring Boot, 15+ Telegram/VK-Bots in Agile/Jira (Online-Shops, CRM, Arbitrage)',
+    j2_t2:'Kafka in 2 Projekten: At-least-once-Delivery, DLQ — Nachrichtenverlust beseitigt, Stabilität +50%',
+    j2_t3:'Docker + Kubernetes + CI/CD (Maven/Gradle, GitHub Actions) — Deploy: Stunden → 5–10 Min',
+    j2_t4:'JUnit 5 + Mockito, 75–80% Abdeckung auf REST API + Spring Security — Regressionen beseitigt',
+    j2_t5:'Legacy-Arbitrage-Algorithmus-Optimierung (Java): 60–70 → <strong>400+ Ops / 25–30 Sek</strong>, MySQL/SQL',
+    j2_t6:'Projekte eigenständig vom Lastenheft bis zur Produktion geleitet, Koordination mit Business und Frontend',
+    // ── Job 3 Freelance
+    j3_period:'Jun 2021 — heute', j3_role:'Freelance Backend & Mobile Developer', j3_dur:'4+ J.',
+    j3_a1:'Entwickelte REST-API-Services, Android-Apps (Java) und Telegram-Bots für individuelle Aufträge',
+    j3_a2:'Kundenbetreuung: Erstellung von Pflichtenheften, Zeitschätzung, pünktliche MVP-Lieferung',
+    // ── Goal years
+    goal1_year:'2026–2030', goal2_year:'2030–2032', goal3_year:'bis 2030', goal4_year:'Langfristig',
   },
 
   pl: {
@@ -347,6 +588,7 @@ const T = {
     proj1_desc:'Aplikacja do nauki języków podczas snu. ~20k linii kodu. Fazy snu, TTS/SSML, śledzenie postępów.',
     proj2_desc:'Aplikacja do znajdowania osób i zespołów. Finalista zawodów. Android + backend Java.',
     proj_bank_desc:'REST API systemu bankowego. Spring Boot, PostgreSQL, uwierzytelnianie JWT, role użytkowników.',
+    proj_delivered_desc:'Pet-projekt: mikrousługowy klon Yandex Food. Spring Boot, Kafka, PostgreSQL, Docker — pełna symulacja platformy dostawy jedzenia.',
     proj3_title:'Hochlast-Boty Telegram',
     proj3_desc:'15+ botów komercyjnych, miliony wiadomości, integracja Stripe, 19 000+ aktywnych użytkowników.',
     proj4_title:'Platformer 2.5D', proj4_desc:'Gra na Unreal Engine 5 z własną fizyką. 2. miejsce na Patriot.by.',
@@ -370,6 +612,66 @@ const T = {
     form_message:'Wiadomość', form_send:'Wyślij Wiadomość',
     form_success:'✓ Wiadomość wysłana! Odezwę się wkrótce.',
     form_error:'✗ Błąd wysyłania. Spróbuj ponownie lub napisz bezpośrednio.',
+    // ── New: Publications (Habr + dev.to)
+    nav_pub:'Artykuły',
+    pub_tag:'Publikacje', pub_title:'Artykuły Techniczne',
+    pub_subtitle:'Piszę na Habr (RU) i dev.to (EN): bezpieczeństwo LLM, guardrails, architektura Java. Łącznie ponad 13 000 wyświetleń.',
+    pub_habr_sub:'Rosyjskojęzyczna publiczność · 13 000+ wyświetleń',
+    pub_devto_sub:'Międzynarodowa publiczność · Angielski',
+    pub_all_habr:'Wszystkie artykuły', pub_all_devto:'Wszystkie artykuły',
+    pub1_date:'15 kwi 2026 · 14 min',
+    pub1_title:'Guardrails dla LLM w Javie: jak poskromić prompt injections i toksyczne odpowiedzi',
+    pub1_desc:'„System prompt to instrukcja, którą LLM stara się wykonać, ale nie musi". Analiza zabezpieczeń na poziomie kodu: maskowanie PII, detekcja jailbreak, polityka fail-closed.',
+    pub2_date:'16 kwi 2026 · 13 min',
+    pub2_title:'Toksyczne treści, prompt hacking i ochrona AI — wszystko o Guardrails dla LLM',
+    pub2_desc:'Przegląd podatności modeli językowych i technologii ochrony: prompt injection, jailbreak, eksfiltracja danych. Praktyczne podejścia i wzorce architektoniczne.',
+    pub3_date:'11 kwi 2026 · EN',
+    pub3_title:'JGuardrails: Production-Ready Safety Rails for Java LLM Applications',
+    pub3_desc:'Biblioteka Java, która opakowuje wywołania LLM w pipeline wejścia/wyjścia dla wymuszenia ograniczeń bezpieczeństwa: detekcja prompt injection, wycieków PII, toksycznych wyjść, niepoprawnego JSON. Bezpieczeństwo jako kod, nie tylko system prompt.',
+    pub4_date:'16 kwi 2026 · EN',
+    pub4_title:'JGuardrails 1.0.0 — Hardening Java LLM Apps Against Jailbreaks, Toxicity, and Prompt Injection',
+    pub4_desc:'Wydanie 1.0.0: wydajność dzięki Aho-Corasick, wsparcie dla języka japońskiego, rozszerzalna architektura wzorców. Ochrona przed prompt injection, jailbreakami i toksycznymi wyjściami.',
+    // ── New: JGuardrails project
+    open_source:'Open Source',
+    proj_jg_desc:'Pierwsza biblioteka Java guardrails dla LLM: ochrona przed prompt injection, maskowanie PII, detekcja toksycznych treści. Spring AI / LangChain4j, wielojęzyczność (7 języków). Odpowiednik NVIDIA NeMo Guardrails dla ekosystemu Java.',
+    // ── New: Timeline two-tier (Job 1 BuildersApp)
+    sep_results:'Wyniki', sep_tech:'Dla specjalistów technicznych',
+    j1_period:'Kwi 2025 — Paź 2025', j1_role:'Backend Developer', j1_dur:'7 mies.',
+    j1_team:'Zespół 5–6 osób · utrzymanie istniejących projektów + rozwój nowego serwisu',
+    j1_hr1:'Stworzyłem bota od zera — <strong>19 000+ użytkowników</strong> w 6 miesięcy, retencja +25%',
+    j1_hr2:'Wdrożyłem system płatności escrow — bezpieczne transakcje dla tysięcy użytkowników',
+    j1_hr3:'Przyspieszyłem przetwarzanie żądań — <strong>3–4× szybciej</strong> przy szczytowych obciążeniach',
+    j1_hr4:'Zmniejszyłem obciążenie bazy danych — <strong>o 30–40%</strong> przy 5× wzroście audytorium, bez downtime',
+    j1_hr5:'Pokrycie testami scenariuszy płatności — <strong>80%+</strong>, regresje wyeliminowane',
+    j1_hr6:'Zaimplementowałem ekrany płatności i powiadomienia push w aplikacji mobilnej',
+    j1_t1:'Python + aiogram 3 + asyncio, integracja ze Spring Boot backend — bot Telegram od zera',
+    j1_t2:'Logika escrow i integracja Stripe w architekturze mikroserwisowej — bezpieczne transakcje',
+    j1_t3:'Architektura async + Redis cache-aside + PostgreSQL — 3–4× szybciej przy szczytowym obciążeniu',
+    j1_t4:'Optymalizacja ciężkich SQL przez Hibernate — −30–40% obciążenia BD podczas wzrostu',
+    j1_t5:'pytest + JUnit 5 + Mockito w scenariuszach płatności — 80%+ pokrycia, regresje wyeliminowane',
+    j1_t6:'Natywny moduł Android (Java) + Flutter w pipeline CI/CD: ekrany płatności, powiadomienia push',
+    // ── Job 2 BelBot
+    j2_period:'Sty 2022 — Lip 2025', j2_role:'Backend Developer',
+    j2_outsource:'Outsourcing · Białoruś', j2_dur:'3,5 r.',
+    j2_team:'Zespół 3 osób (frontend, tech lead, ja — backend) · Agile / Jira · outsourcing',
+    j2_hr1:'Zrealizowałem <strong>15+ produktów komercyjnych</strong> — od specyfikacji po release, wszystko na czas',
+    j2_hr2:'Wyeliminowałem utratę wiadomości przy szczytowych obciążeniach — stabilność <strong>+50%</strong>',
+    j2_hr3:'Skróciłem czas wdrażania — <strong>z godzin do 5–10 minut</strong>',
+    j2_hr4:'Zwiększyłem pokrycie testami do <strong>75–80%</strong> — regresje praktycznie zniknęły',
+    j2_hr5:'Przyspieszyłem kluczowy algorytm <strong>6×</strong> — z 70 do 400+ operacji w 30 sekund',
+    j2_hr6:'Prowadziłem projekty od specyfikacji do produkcji — koordynacja z biznesem i frontend bez opóźnień',
+    j2_t1:'Java + Spring Boot, 15+ botów Telegram/VK w Agile/Jira (sklepy online, CRM, arbitraż)',
+    j2_t2:'Kafka w 2 projektach: at-least-once delivery, DLQ — utrata wiadomości wyeliminowana, stabilność +50%',
+    j2_t3:'Docker + Kubernetes + CI/CD (Maven/Gradle, GitHub Actions) — wdrożenie: godziny → 5–10 min',
+    j2_t4:'JUnit 5 + Mockito, 75–80% pokrycia na REST API + Spring Security — regresje wyeliminowane',
+    j2_t5:'Optymalizacja legacy algorytmu arbitrażu (Java): 60–70 → <strong>400+ ops / 25–30 sek</strong>, MySQL/SQL',
+    j2_t6:'Samodzielnie prowadziłem projekty od specyfikacji do produkcji, koordynując z biznesem i frontend',
+    // ── Job 3 Freelance
+    j3_period:'Cze 2021 — obecnie', j3_role:'Freelance Backend & Mobile Developer', j3_dur:'4+ lat',
+    j3_a1:'Rozwijałem serwisy REST API, aplikacje Android (Java) i boty Telegram pod indywidualne zamówienia',
+    j3_a2:'Obsługa klientów: pisanie specyfikacji, szacowanie terminów, dostarczanie MVP na czas',
+    // ── Goal years
+    goal1_year:'2026–2030', goal2_year:'2030–2032', goal3_year:'do 2030', goal4_year:'Długoterminowo',
   }
 };
 
@@ -455,18 +757,42 @@ function initNav() {
   const nav    = document.getElementById('nav');
   const burger = document.getElementById('burger');
   const menu   = document.getElementById('mobileMenu');
-  const close  = document.getElementById('mobileClose');
 
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 40);
   }, { passive: true });
 
-  function openMenu()  { burger.classList.add('active'); menu.classList.add('open'); }
-  function closeMenu() { burger.classList.remove('active'); menu.classList.remove('open'); }
+  function openMenu() {
+    burger.classList.add('active');
+    burger.setAttribute('aria-expanded', 'true');
+    menu.classList.add('open');
+    menu.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('no-scroll');
+  }
+  function closeMenu() {
+    burger.classList.remove('active');
+    burger.setAttribute('aria-expanded', 'false');
+    menu.classList.remove('open');
+    menu.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('no-scroll');
+  }
+  function toggleMenu() {
+    if (menu.classList.contains('open')) closeMenu();
+    else openMenu();
+  }
 
-  burger?.addEventListener('click', openMenu);
-  close?.addEventListener('click', closeMenu);
-  menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  burger?.addEventListener('click', toggleMenu);
+  menu?.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', closeMenu));
+
+  // ESC closes menu
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && menu?.classList.contains('open')) closeMenu();
+  });
+
+  // Close when viewport grows past mobile breakpoint
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 860 && menu?.classList.contains('open')) closeMenu();
+  });
 
   // Active link tracking
   const sections = document.querySelectorAll('section[id]');
